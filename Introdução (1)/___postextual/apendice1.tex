@@ -1,0 +1,127 @@
+\addcontentsline{toc}{chapter}{Apêndice}
+\chapter{ALGORÍTIMO PARA ESTIMAR A VELOCIDADE DO MOTOR}
+\label{apendice:01}
+
+\section{Algorítmo da STCZT no Matlab}
+\definecolor{verde}{RGB}{25, 90, 25}
+\lstset{
+		language=Matlab,
+		extendedchars=true, % permite acentos
+		basicstyle=\ttfamily\scriptsize, 
+		keywordstyle=\color{blue}, 
+		stringstyle=\color{purple}, 
+		commentstyle=\color{verde}, 
+		extendedchars=true, 
+		showspaces=false, 
+		showstringspaces=false, 
+		numbers=left,
+		numberstyle=\tiny,
+		breaklines=true, 
+		backgroundcolor=\color{white},
+		breakautoindent=true, 
+		captionpos=t, %top caption
+		xleftmargin=10.5mm,
+		tabsize=3,
+		framexleftmargin=9.5mm,
+		framexrightmargin=-1.0mm, 
+		frame=shadowbox, %single
+		rulesepcolor=\color{gray},
+		%numberbychapter=false % deve ser usado antes do begin{document}..yseu na classe...insere numeração sequencial
+}
+
+%\lstset{framexleftmargin=6mm, 
+%		frame=shadowbox, %single
+%		rulesepcolor=\color{gray},
+%		numberbychapter=true
+%}
+
+
+\begin{lstlisting}[caption= Algoritimo CZT no Matlab, label=prog:03]
+	clc;
+	NP=6*512;
+	% fs=10000;
+	fs=2*5000;
+	Ts=1/fs;
+	% dx=dfs10k;
+	dados=data(:,3); %buffer_60Hz_125_p;  %_amp250_30Hz_variavel_240_025;
+	%dados= dfs10k;  %corrente_fs_5k;
+	dados=dados - mean(dados);
+	NT=length(dados);
+	T=NT*fs^-1;
+	dp=50;
+	d=dp*NP/100;  %4*128;
+	NZ=floor((d-NP+NT)/d);
+	s=1;
+	% f0=25;
+	% f1=f0-7;
+	% f2=f0+7;
+	m=NP;
+	h=hanning(NP);
+	fredez=zeros(1,NZ);
+	dx=dados;
+	t_p=(1:NZ)*(d/fs);
+	tic;
+	resfft=fs/NP;
+	for i=1:NZ
+	x=dx(s:s+NP-1).*h; 
+	y = fft(x,NP); 
+	[val idx]=max(abs(y));
+	%f0=(idx)*resfft;
+	
+	%   f0=28;
+	%   f1=f0-5;
+	%   f2=f0+5;
+	f1=22;
+	f2=32;
+	
+	w=exp(-j*2*pi*(f2-f1)/(m*fs));                          % Set complex ratio
+	a=exp(j*2*pi*f1/fs);                                    % Set complex starting point
+	z=czt(x,m,w,a);                                         % Compute using CZT function
+	abs_z=abs(z);
+	[l c]=max(abs_z);
+	fredez(i)=f1+(c-1)*((f2-f1)/NP);
+	s=s+d;
+	end
+	
+	tempo=toc;
+	% hold on;
+	% plot(t,fredez,'r');
+	% figure;
+	% plot(t,fsh,'r');
+	% xlabel('Tempo(s)');
+	% ylabel('Frequencia');
+	% title(['STCZT::: Janela:<',num2str(NP),' pontos> Desclocamento:<',num2str(d),' pontos = ',num2str(100*d/NP),'%>']);
+	tmax=60;
+	figure;
+	subplot(2,1,2);
+	plot(t_p,60*fredez,'r');
+	axis([0 tmax 1740 1790])
+	xlabel('Tempo(s)');
+	ylabel('Rotacao (RPM)');
+	
+	subplot(2,1,1);
+	pwm_i=data(:,2);
+	pwm_i=pwm_i-mean(pwm_i(1:100));
+	cmax=60;
+	cmin=0;
+	pmax=mean(pwm_i)*2,
+	pwm_f=cmin+pwm_i*(cmax/pmax);
+	tf=0:Ts:length(pwm_f)*Ts - Ts;
+	plot(tf,pwm_f,'b');
+	axis([0 tmax -3 45])
+	% hold on
+	% pulso_f=data(:,1); 
+	% pulso_f=pulso_f-mean(pulso_f(1:10));
+	% plot(tf, pulso_f,'g');
+	xlabel('Tempo(s)');
+	ylabel('Carga de frenagem (%)');
+	% title(['STCZT::: Janela:<',num2str(NP),' pontos> Desclocamento:<',num2str(d),' pontos = ',num2str(100*d/NP),'%>']);
+	% clearvars -except -regexp _p$ % limpa todas vari?veis exceto aquelas que terminem com "_p" -> Adem?rio
+	%  
+	% grid;
+	hold off
+	
+\end{lstlisting}
+
+\section{Seção do apêndice}
+\lipsum %% gera texto apenas para teste

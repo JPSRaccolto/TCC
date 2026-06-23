@@ -1,0 +1,150 @@
+%% Template para Pré-TCC e TCC com base na classe CorujaTeX
+%% versão 1.0.0
+%% (c) 2021 Colegiado do Curso de Engenharia Elétrica - UFOB
+%% 
+%% Carrega a classe CorujaTeX
+%% Opções: * Tipo do Texto
+%%           ptcc  - para proposta de trabalho de conclusão de curso (Pré-TCC)
+%%           tcc   - para monografias de graduação - TCC (padrão)
+%%           dis   - para dissertações de mestrado
+%%         * Paginação
+%%           digital  - para impressão em face única (oneside)
+%%           impresso - para impressão em frente e verso (twoside) [padrão]
+\documentclass[ptcc,digital]{CorujaTex}
+
+%\usepackage[grid]{eso-pic, graphicx}
+%\usepackage[texcoord,grid,gridunit=mm,gridcolor=black!30,subgridcolor=gray!10]{eso-pic}
+
+%\instituicao{UFOB}
+%\brasao{\includegraphics[width=2.61cm]{logo.png}}
+
+%\cidade{Vitória da Conquista-BA}%\department{Colegiado de Eng. Elétrica}
+
+% Curso de graduação
+% e.g. \curso{Graduação em Engenharia Elétrica}
+% ** Valor padrão: Engenharia Elétrica
+%\curso{Engenharia Elétrica}
+
+% Campus
+% e.g. \campus{Centro Multidisciplinar de Bom Jesus da Lapa}
+% Comente caso não se aplique
+\campus{Centro Multidisciplinar de Bom Jesus da Lapa}
+
+% Setor: (Colegiado ou Departamento)
+% e.g. \setor{Departamento de Engenharia Elétrica}
+% ** Valor padrão: Colegiado de Engenharia Elétrica
+\setor{Colegiado de Engenharia Elétrica}
+
+% Título da Monografia/proposta de monografia
+% e.g. \titulo{Sistema obtenção do múmero de ranhuras de um MIT}
+\titulo{Sistema embarcado para monitoramento e análise de grandezas elétricas com aplicação de machine learning}
+%\subtitulo{coloque o subtítulo, se houver}
+
+% Autor
+% e.g. \author{Thomas Edison}
+\autor{João Pedro Soares Raccolto}
+
+% Orientador(a)
+% para orientador do sexo masculino use \orientador{nome}
+% e.g. \orientador{Prof. Dr. Nikola Tesla}
+% para orientador do sexo feminino use \orientadora{nome}
+% e.g. \orientadora{Profa. Dra. Marie Curie}
+\orientador{Prof. Dr. Manoel Messías Silva Júnior}
+
+% Coorientador(a)
+% para coorientador do sexo masculino use \coorientador{nome}
+% e.g. \coorientador{Prof. Dr. Nikola Tesla}
+% para coorientador do sexo feminino use \coorientadora{Nome}
+% e.g. \coorientadora{Profa. Dra. Marie Curie}
+%\coorientadora{Profa. Dra. Maria Gaetana Agnesi}
+
+% Data da defesa
+% e.g. \date{Dezembro de 2012}
+\date{Junho de 2026}
+
+\begin{document}
+	
+	%\frontmatter % marca o início da parte pré-textual
+	%\pagestyle{empty}
+	\printCapa
+	
+	\printFolhaderosto
+
+	\printfichacatalografica %Insere ficha cat. apenas para OPT=tcc
+	
+	\printFolhaAprovacao
+	
+	\printDedicatoria %Insere dedicatória apenas para OPT=tcc
+	
+	\printAgradecimentos %Insere agradecimentos apenas para OPT=tcc
+	
+	\printEpigrafe %Insere epígrafe apenas para OPT=tcc 
+	
+	\printResumo
+	
+	\printAbstract % insere abstract apenas para OPT=tcc
+	
+	\printFiguras % lista de figuras
+	
+	\printTabelas % lista de tabelas
+	
+	%\listof{quadro}{Lista de Quadros}
+
+	\printQuadros % lista de quadros
+	
+	\lstlistoflistings % lista de programas
+	\thispagestyle{empty}
+	
+	\printAcronimos % insere lista de abreviaturas, acrônimos e siglas
+	
+	\printSimbolos % insere lista de Símbolos
+	
+	\printSumario
+	
+	%\mainmatter % marca o início da parte textual 
+	
+	\include{___textual/capitulo1}
+	\newpage \thispagestyle{empty}
+	
+	\include{___textual/capitulo2}
+	\newpage \thispagestyle{empty}
+	
+	\include{___textual/capitulo3}
+	\newpage \thispagestyle{empty}
+	
+	%\include{___textual/capitulo4}
+	%\newpage \thispagestyle{empty}
+	
+	%\include{___textual/capitulo5}
+	%\newpage \thispagestyle{empty}
+	
+	%\include{___textual/capitulo6}
+	%\newpage \thispagestyle{empty}
+	
+	%\backmatter % marca o início da parte pós-textual
+ 	%\bibliographystyle{abntex2-alf}
+ 	\bibliography{___postextual/CorujaTexReferencias}
+ 	\addcontentsline{toc}{chapter}{REFERÊNCIAS} % lista as referências no sumário
+ 	\newpage \thispagestyle{empty}
+ 	
+ 	%\appendix
+ 	
+ 	%%\include{___postextual/apendice1.tex}	
+ 	%\newpage \thispagestyle{empty}
+ 	
+ 	%\anexo
+ 	
+ 	%\include{___postextual/anexo1.tex}
+ 	%\newpage
+    \thispagestyle{empty}
+ 	
+ 	\colophon
+\end{document}	
+
+
+
+%	\input{filename} imports the commands from filename.tex into the target file; it's equivalent to typing all the commands from filename.tex right into the current file where the \input line is.
+%	
+%	\include{filename} essentially does a \clearpage before and after \input{filename}, together with some magic to switch to another .aux file, and omits the inclusion at all if you have an \includeonly without the filename in the argument. This is primarily useful when you have a big project on a slow computer; changing one of the include targets won't force you to regenerate the outputs of all the rest.
+%	
+%\input{Lista_AAS.tex} % inserir lista de abreviaturas, acrônimos e siglas

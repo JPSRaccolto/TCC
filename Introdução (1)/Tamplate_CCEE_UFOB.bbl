@@ -1,0 +1,253 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[{AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA} 2021]{ANEEL2021}
+\abntrefinfo{{AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA}}{{AGÊNCIA NACIONAL DE
+  ENERGIA ELÉTRICA}}{2021}
+{{AGÊNCIA NACIONAL DE ENERGIA ELÉTRICA}. \emph{Procedimentos de
+  Distribuição de Energia Elétrica no Sistema Elétrico Nacional –
+  PRODIST: Módulo 8 – Qualidade da Energia Elétrica}.
+Brasília, 2021.}
+
+\bibitem[Akagi, Watanabe e Aredes 2007]{Akagi2007}
+\abntrefinfo{Akagi, Watanabe e Aredes}{AKAGI; WATANABE; AREDES}{2007}
+{AKAGI, H.; WATANABE, E.~H.; AREDES, M. \emph{Instantaneous Power Theory and
+  Applications to Power Conditioning}. Hoboken: IEEE Press /
+  Wiley-Interscience, 2007.}
+
+\bibitem[Alexander e Sadiku 2013]{Alexander2013}
+\abntrefinfo{Alexander e Sadiku}{ALEXANDER; SADIKU}{2013}
+{ALEXANDER, C.~K.; SADIKU, M. N.~O. \emph{Fundamentos de Circuitos Elétricos}.
+  5. ed. Porto Alegre: AMGH, 2013.}
+
+\bibitem[{ANALOG DEVICES} 2025]{AnalogDevices2025}
+\abntrefinfo{{ANALOG DEVICES}}{{ANALOG DEVICES}}{2025}
+{{ANALOG DEVICES}. \emph{Understanding SAR ADCs: Their Architecture and
+  Comparison with Other ADCs}. 2025.
+Dispon{\'\i}vel em:
+  \url{https://www.analog.com/en/resources/technical-articles/successive-approximation-registers-sar-and-flash-adcs.html}.
+  Acesso em: 03 abr. 2026.}
+
+\bibitem[Bezerra 2020]{Bezerra2020}
+\abntrefinfo{Bezerra}{BEZERRA}{2020}
+{BEZERRA, E.~A.
+\emph{Sistema embarcado aplicado a medição de energia elétrica de baixo
+  custo}.
+Monografia (Dissertação de Mestrado) --- Universidade Salvador (UNIFACS),
+  2020.}
+
+\bibitem[BISHOP 2006]{Bishop2006}
+\abntrefinfo{BISHOP}{BISHOP}{2006}
+{BISHOP, C.~M. \emph{Pattern Recognition and Machine Learning}. New York:
+  Springer, 2006.}
+
+\bibitem[Camargo 2025]{Camargo2025}
+\abntrefinfo{Camargo}{CAMARGO}{2025}
+{CAMARGO, M.~L.
+\emph{Sistema embarcado para medição de energia e monitoramento online}.
+Monografia (Trabalho de Conclusão de Curso) --- Instituto de Ciência e
+  Tecnologia de Sorocaba, Universidade Estadual Paulista (UNESP), 2025.}
+
+\bibitem[Cho et al. 2014]{Cho2014}
+\abntrefinfo{Cho et al.}{CHO et al.}{2014}
+{CHO, K. et al. Learning phrase representations using {RNN} encoder-decoder for
+  statistical machine translation. In:  \emph{Proceedings of the 2014
+  Conference on Empirical Methods in Natural Language Processing (EMNLP)}.
+  Doha, Qatar: Association for Computational Linguistics, 2014. p. 1724--1734.}
+
+\bibitem[DataCaptureControl 2023]{DataCapture2023}
+\abntrefinfo{DataCaptureControl}{DATACAPTURECONTROL}{2023}
+{DATACAPTURECONTROL. \emph{ZMPT101B AC Voltage Transformer Sensor Module:
+  Pinout, Schematic, and Calibration}. 2023.
+Dispon{\'\i}vel em:
+  \url{https://datacapturecontrol.com/articles/io-components/sensors/voltage/zmpt101b-ac-voltage-transformer-sensor-module}.
+  Acesso em: abr. 2026.}
+
+\bibitem[Dugan et al. 2012]{Dugan2012}
+\abntrefinfo{Dugan et al.}{DUGAN et al.}{2012}
+{DUGAN, R.~C. et al. \emph{Electrical Power Systems Quality}. 3. ed. New York:
+  McGraw-Hill, 2012.}
+
+\bibitem[{ELECTRIC SERVICE} 2026]{ElectricService2026}
+\abntrefinfo{{ELECTRIC SERVICE}}{{ELECTRIC SERVICE}}{2026}
+{{ELECTRIC SERVICE}. \emph{Qualidade de Energia: Afundamento (Sag) e Elevação
+  (Swell) de Tensão}. 2026.
+Dispon{\'\i}vel em:
+  \url{https://electricservice.com.br/medicoes/qe/sag-swell/}. Acesso em: 24
+  abr. 2026.}
+
+\bibitem[Ferraz, Ferraz e Santos 2018]{Ferraz2018}
+\abntrefinfo{Ferraz, Ferraz e Santos}{FERRAZ; FERRAZ; SANTOS}{2018}
+{FERRAZ, R. S.~F.; FERRAZ, R. S.~F.; SANTOS, B. L.~M. Analisador de energia de
+  baixo custo empregando {Arduino}.
+\emph{Semana Acadêmica}, 2018.}
+
+\bibitem[Filho 2010]{Filho2010}
+\abntrefinfo{Filho}{FILHO}{2010}
+{FILHO, J.~M. \emph{Instalações Elétricas Industriais}. [S.l.: s.n.], 2010.}
+
+\bibitem[Flora 2025]{Flora2025}
+\abntrefinfo{Flora}{FLORA}{2025}
+{FLORA, A. L.~D.
+\emph{Desenvolvimento de Analisador de Energia Monofásico em Sistema
+  Embarcado}.
+Monografia (Trabalho de Conclusão de Curso) --- Universidade Federal do Rio
+  Grande do Sul (UFRGS), 2025.}
+
+\bibitem[GILCHRIST 2016]{Gilchrist2016}
+\abntrefinfo{GILCHRIST}{GILCHRIST}{2016}
+{GILCHRIST, A. \emph{Industry 4.0: The Industrial Internet of Things}. New
+  York: Apress, 2016.}
+
+\bibitem[Goodfellow, Bengio e Courville 2016]{Goodfellow2016}
+\abntrefinfo{Goodfellow, Bengio e Courville}{GOODFELLOW; BENGIO;
+  COURVILLE}{2016}
+{GOODFELLOW, I.; BENGIO, Y.; COURVILLE, A. \emph{Deep Learning}. Cambridge: MIT
+  Press, 2016. Dispon{\'\i}vel em: \url{http://www.deeplearningbook.org}.}
+
+\bibitem[Hastie, Tibshirani e Friedman 2009]{Hastie2009}
+\abntrefinfo{Hastie, Tibshirani e Friedman}{HASTIE; TIBSHIRANI; FRIEDMAN}{2009}
+{HASTIE, T.; TIBSHIRANI, R.; FRIEDMAN, J. \emph{The Elements of Statistical
+  Learning: Data Mining, Inference, and Prediction}. 2. ed. New York: Springer,
+  2009.}
+
+\bibitem[Haykin e Veen 2001]{Haykin2001}
+\abntrefinfo{Haykin e Veen}{HAYKIN; VEEN}{2001}
+{HAYKIN, S.; VEEN, B.~V. \emph{Sinais e Sistemas}. Porto Alegre: Bookman, 2001.
+  Tradução de José Carlos Barbosa dos Santos.}
+
+\bibitem[{IEEE Power and Energy Society} 2010]{IEEE2010}
+\abntrefinfo{{IEEE Power and Energy Society}}{{IEEE Power and Energy
+  Society}}{2010}
+{{IEEE Power and Energy Society}. \emph{IEEE Std 1459-2010: IEEE Standard
+  Definitions for the Measurement of Electric Power Quantities Under
+  Sinusoidal, Nonsinusoidal, Balanced, or Unbalanced Conditions}.
+New York, 2010.}
+
+\bibitem[IMMES 2024]{Immes2024}
+\abntrefinfo{IMMES}{IMMES}{2024}
+{IMMES. \emph{Sistemas Embarcados}. 2024.
+Dispon{\'\i}vel em:
+  \url{https://immes.edu.br/wp-content/uploads/2025/05/Artigo\_MATIZ\_2024\_Sistemas\_Embarcados.pdf}.
+  Acesso em: 03 abr. 2026.}
+
+\bibitem[Jr. 2012]{Jr2012}
+\abntrefinfo{Jr.}{JR.}{2012}
+{JR., J.~M. \emph{Proteção de Sistemas Elétricos de Potência}. [S.l.:
+  s.n.], 2012.}
+
+\bibitem[Jr. 1986]{Jr1986}
+\abntrefinfo{Jr.}{JR.}{1986}
+{JR., W. D.~S. \emph{Elementos de Análise de Sistemas de Potência}. [S.l.:
+  s.n.], 1986.}
+
+\bibitem[Kester 2005]{Kester2005}
+\abntrefinfo{Kester}{KESTER}{2005}
+{KESTER, W. \emph{The Data Conversion Handbook}. Burlington: Newnes/Elsevier,
+  2005.}
+
+\bibitem[KLS 2018]{KLS2018}
+\abntrefinfo{KLS}{KLS}{2018}
+{KLS. \emph{Sistemas Embarcados}. 2018.
+Dispon{\'\i}vel em:
+  \url{https://cm-kls-content.s3.amazonaws.com/201801/INTERATIVAS\_2\_0/SISTEMAS\_EMBARCADOS/U1/LIVRO\_UNICO.pdf}.
+  Acesso em: 03 abr. 2026.}
+
+\bibitem[Lopes, Rosa e Werhli 2025]{Lopes2025}
+\abntrefinfo{Lopes, Rosa e Werhli}{LOPES; ROSA; WERHLI}{2025}
+{LOPES, F.~L.; ROSA, V. S.~d.; WERHLI, A.~V. \emph{Utilização de sistemas
+  embarcados para medição de consumo de energia em simulações
+  computacionais}. 2025. Universidade Federal do Rio Grande (FURG) / Faculdade
+  Anhanguera.}
+
+\bibitem[Neumann 1945]{Neumann1945}
+\abntrefinfo{Neumann}{NEUMANN}{1945}
+{NEUMANN, J.~V. \emph{First Draft of a Report on the EDVAC}. 1945.
+Dispon{\'\i}vel em:
+  \url{https://library.si.edu/digital-library/book/firstdraftofrepo00vonn}.
+  Acesso em: 03 abr. 2026.}
+
+\bibitem[Oliveira e Andrade 2006]{Oliveira2006}
+\abntrefinfo{Oliveira e Andrade}{OLIVEIRA; ANDRADE}{2006}
+{OLIVEIRA, A. S.~d.; ANDRADE, F. S.~d. \emph{Sistemas Embarcados: Hardware e
+  Firmware na Prática}. São Paulo: Érica, 2006.}
+
+\bibitem[Oliveira 2022]{oliveira2022}
+\abntrefinfo{Oliveira}{OLIVEIRA}{2022}
+{OLIVEIRA, J.~D.
+\emph{Um protótipo para medição monofásica em rede de fator de potência
+  baseado no microcontrolador {ESP32}}.
+Monografia (Monografia (Graduação em Engenharia de Controle e Automação))
+  --- Universidade Federal de Ouro Preto, Escola de Minas, Ouro Preto, 2022.}
+
+\bibitem[{OpenEnergy Monitor} 2015]{OpenEnergy2015}
+\abntrefinfo{{OpenEnergy Monitor}}{{OpenEnergy Monitor}}{2015}
+{{OpenEnergy Monitor}. \emph{YHDC SCT-013-000 Current Transformer: A Report on
+  the Properties of the Transformer}. 2015.
+Dispon{\'\i}vel em:
+  \url{https://docs.openenergymonitor.org/\_downloads/79920cf9f5ee68a06810965bf002a92f/YhdcCTReportIss6.pdf}.
+  Acesso em: abr. 2026.}
+
+\bibitem[{OpenEnergy Monitor} 2019]{OpenEnergy2019}
+\abntrefinfo{{OpenEnergy Monitor}}{{OpenEnergy Monitor}}{2019}
+{{OpenEnergy Monitor}. \emph{CT Sensors Interfacing with an Arduino}. 2019.
+Dispon{\'\i}vel em:
+  \url{https://docs.openenergymonitor.org/electricity-monitoring/ct-sensors/interface-with-arduino.html}.
+  Acesso em: abr. 2026.}
+
+\bibitem[Paredes et al. 2012]{Paredes2012}
+\abntrefinfo{Paredes et al.}{PAREDES et al.}{2012}
+{PAREDES, H. K.~M. et al. Compensação ativa paralela baseada na teoria de
+  potência conservativa.
+\emph{Eletrônica de Potência}, v.~17, n.~1, p. 409--418, fev 2012.}
+
+\bibitem[Patterson e Hennessy 2014]{Patterson2014}
+\abntrefinfo{Patterson e Hennessy}{PATTERSON; HENNESSY}{2014}
+{PATTERSON, D.~A.; HENNESSY, J.~L. \emph{Organização e Projeto de
+  Computadores: A Interface Hardware/Software}. 5. ed. Rio de Janeiro:
+  Elsevier, 2014.}
+
+\bibitem[Pimentel et al. 2024]{Pimentel2024}
+\abntrefinfo{Pimentel et al.}{PIMENTEL et al.}{2024}
+{PIMENTEL, H. P. P. d.~S. et al. Predição do consumo energético de
+  dispositivos {LoRa} usando aprendizagem de máquina. In:  \emph{XXV Congresso
+  Brasileiro de Automática - CBA 2024}. [S.l.: s.n.], 2024.}
+
+\bibitem[Rio, Eichner e Rizzetti 2020]{Rio2020}
+\abntrefinfo{Rio, Eichner e Rizzetti}{RIO; EICHNER; RIZZETTI}{2020}
+{RIO, L. S.~D.; EICHNER, A.~R.; RIZZETTI, T.~A. \emph{Plataforma e-consumo:
+  Monitoramento inteligente do consumo de energia elétrica em residências}.
+  2020. Colégio Técnico Industrial de Santa Maria -- Universidade Federal de
+  Santa Maria (UFSM).}
+
+\bibitem[SCIENCEDIRECT 2025]{ScienceDirect2025}
+\abntrefinfo{SCIENCEDIRECT}{SCIENCEDIRECT}{2025}
+{SCIENCEDIRECT. \emph{Successive-Approximation-Register ADC - An Overview}.
+  2025.
+Dispon{\'\i}vel em:
+  \url{https://www.sciencedirect.com/topics/engineering/successive-approximation-register-adc}.
+  Acesso em: 03 abr. 2026.}
+
+\bibitem[Sedra e Smith 2017]{Sedra2017}
+\abntrefinfo{Sedra e Smith}{SEDRA; SMITH}{2017}
+{SEDRA, A.~S.; SMITH, K.~C. \emph{Microeletrônica}. 7. ed. São Paulo:
+  Pearson, 2017.}
+
+\bibitem[Tenti, Mattavelli e Morales-Paredes 2011]{Tenti2011}
+\abntrefinfo{Tenti, Mattavelli e Morales-Paredes}{TENTI; MATTAVELLI;
+  MORALES-PAREDES}{2011}
+{TENTI, P.; MATTAVELLI, P.; MORALES-PAREDES, H.~K. Conservative power theory, a
+  framework to approach control and accountability issues in smart microgrids.
+\emph{IEEE Transactions on Power Electronics}, v.~26, n.~3, p. 664--673, mar
+  2011.}
+
+\bibitem[Yiu 2013]{Yiu2013}
+\abntrefinfo{Yiu}{YIU}{2013}
+{YIU, J. \emph{The Definitive Guide to ARM Cortex-M3 and Cortex-M4 Processors}.
+  3. ed. Oxford: Newnes, 2013.}
+
+\end{thebibliography}

@@ -1,0 +1,93 @@
+\chapter{Metodologia}{}
+\section{Sistema Proposto}
+
+O sistema proposto neste trabalho consiste no desenvolvimento de uma estação de aquisição de dados elétricos, capaz de monitorar grandezas como corrente e tensão em tempo real, utilizando uma plataforma embarcada de baixo custo voltada para ambientes residênciais. Além disso, propoem-se a realização de um pós processamento desses dados coletados, com o objetivo de analisar e prever o consumo de energia elétrica por meio de técnicas de aprendizado de máquina.
+
+A arquitetura do sistema é centrada no microcontrolador Raspberry Pi Pico 2 W, responsável pela aquisição, processamento, armazenamento e exibição dos dados coletados. Para a medição de corrente elétrica, é utilizado o sensor não invasivo SCT013-000, enquanto a medição de tensão é realizada por meio do sensor ZMPT101B, ambos amplamente empregados em aplicações de monitoramento energético. Com isso, os sinais provenientes dos sensores passam por um estágio de condicionamento analógico, com o objetivo de adequá-los às características de entrada do conversor analógico-digital (ADC) do microcontrolador. Esse condicionamento inclui filtragem, ajuste de nível de tensão (offset) e limitação de amplitude, garantindo maior precisão e segurança na aquisição dos dados.
+
+Nesse sentido, logo após o condicionamento, os sinais são convertidos para o domínio digital pelo ADC interno do Raspberry Pi Pico 2 W. Os dados digitalizados são então processados e armazenados em um cartão microSD, permitindo o registro histórico das medições para análises posteriores. Adicionalmente, o sistema conta com um display OLED SSD1306, responsável por apresentar, em tempo real, os valores medidos, possibilitando uma interface simples e direta com o usuário. Complementarmente, será implementada uma interface web para visualização remota dos dados, permitindo o acesso às informações de monitoramento por meio de dispositivos conectados à rede. Essa interface possibilitará uma análise mais abrangente dos dados coletados, contribuindo para a usabilidade e escalabilidade do sistema proposto.
+
+Ademais, com o proposito de regristrar os dados coletados em caso de variações ou interrupções no fornecimento de energia elétrica, o sistema contará com uma bateria de backup, garantindo a continuidade do monitoramento mesmo em situações de falha no fornecimento.
+
+\section{Levantamento dos materiais}
+Para o desenvolvimento do sistema proposto, foi realizado o levantamento dos principais componentes eletrônicos e módulos necessários à implementação da estação de aquisição de dados. Entre eles, destaca-se a placa de prototipagem Raspberry Pi Pico 2 W Figura \ref{fig:01}, com a integração do chip Infineon CYW43439 necessário para conectividade sem fio na qual permite alta performace e baixo consumo de energia, sendo uma escolha adequada para aplicações IoT.
+
+\begin{figure}[!h]
+	\centering
+	\caption{Placa Raspberry Pi Pico 2 W}
+	\includegraphics[width=10cm]{figuras/Pico_2w.png}\\
+	\autoria{Adaptado de \citeonline{makerhero_pico2w}}
+	\label{fig:01}
+\end{figure}
+
+Utiliza-se do microcontrolador RP2350, que é composto por um processador dual-core ARM Cortex-M33, operando em até 150 MHz. O componente conta com 520 KB de memória RAM e 4 MB de memória Flash integrada na placa. Além disso, o modelo oferece recursos avançados como unidade de ponto flutuante (FPU), tecnologia de segurança TrustZone, conexão Wi-Fi e Bluetooth 5.2, mantendo o suporte USB Host/Device e os modos de baixo consumo de energia (\textit{low power}). As principais especificações técnicas deste microcontrolador estão descritas na Tabela \ref{quadro:esp_pico2w}. 
+
+A programação da placa pode ser realizada tanto em MicroPython quanto em C/C++. O envio do código é feito na forma \textit{drag and drop} (arrastar e soltar), isto é, ao conectá-la ao computador, ela é reconhecida como um dispositivo de armazenamento (disco) onde o arquivo do código pode ser colocado para que a placa inicie a execução.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Especificações do Raspberry Pi Pico 2 W}
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Tipo} & Microcontrolador \\ \hline
+    \textbf{Fabricante} & Raspberry Pi Foundation \\ \hline
+    \textbf{Preço} & R\$67,90 \\ \hline
+    \textbf{Dimensões} & 51,3 mm $\times$ 21 mm $\times$ 3,9 mm \\ \hline
+    \textbf{Software} & C/C++ SDK, MicroPython, Thonny IDE \\ \hline
+    \textbf{Clock} & 150 MHz \\ \hline
+    \textbf{Microcontrolador} & RP2350 (Dual-core ARM Cortex-M33) \\ \hline
+    \textbf{Memória RAM} & 520 KB \\ \hline
+    \textbf{Memória Flash} & 4 MB \\ \hline
+    \textbf{GPIOs} & 26 GPIOs multifuncionais \\ \hline
+    \textbf{Periféricos} & 2$\times$SPI, 2$\times$I2C, 2$\times$UART, 4$\times$ADC (12-bit), 24$\times$PWM \\ \hline
+    \textbf{Wireless} & Infineon CYW43439 (Wi-Fi 2.4 GHz 802.11n) \\ \hline
+    \textbf{Bluetooth} & Bluetooth 5.2 (BLE) \\ \hline
+    \textbf{USB} & micro-USB \\ \hline
+    \textbf{Tensão de Alimentação} & 1,8 V a 5,5 V (USB VBUS ou Externa) \\ \hline
+    \textbf{Tensão de Operação} & 3,3 V \\ \hline
+    \textbf{Miscelâneas} & Sensor de temperatura on-board, RTC de alta precisão \\ \hline
+    \end{tabular}
+    
+    \label{quadro:esp_pico2w}
+\end{table}
+
+\subsection{Sensor de corrente}
+O SCT013-000 Figura \ref{fig:02} é um sensor de corrente não invasivo, amplamente utilizado para monitoramento de consumo energético. Ele é projetado para medir correntes alternadas (AC) em circuitos elétricos sem a necessidade de desconectar ou modificar a fiação existente. O sensor é composto por um transformador de corrente, que induz uma corrente proporcional à corrente primária que está sendo medida. O modelo SCT013-000 é capaz de medir correntes de até 100 A, com uma saída de tensão proporcional à corrente medida, facilitando a integração com sistemas de aquisição de dados. Para a medição da tensão de saida do sensor, é necessário o uso de um resistor de carga, que converte a corrente induzida em uma tensão mensurável pelo ADC do microcontrolador. As principais especificações técnicas deste sensor estão descritas na Tabela \ref{quadro:esp_SCT013}. 
+
+\begin{figure}[!h]
+	\centering
+	\caption{Sensor de corrente SCT013-000}
+	\includegraphics[width=10cm]{figuras/SCT013.png}\\
+	\autoria{\cite{makerhero_sct013}}
+	\label{fig:02}
+\end{figure}
+
+
+\begin{table}[htbp]
+    \centering
+    \caption{Especificações técnicas do sensor de corrente SCT-013-000}
+    \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Parâmetro} & \textbf{Especificação} \\ \hline
+    Fabricante & YHDC \\ \hline
+    Modelo & SCT-013-000 \\ \hline
+    Tipo & Transformador de corrente (TC) não invasivo \\ \hline
+    Corrente de entrada & 0 a 100 A AC \\ \hline
+    Corrente de saída & 0 a 50 mA \\ \hline
+    Relação de transformação & 2000:1 \\ \hline
+    Tensão de saída & Definida pelo resistor de carga (burden) \\ \hline
+    Precisão & ±1\% (típica) \\ \hline
+    Linearidade & Alta dentro da faixa nominal \\ \hline
+    Frequência de operação & 50 Hz a 60 Hz \\ \hline
+    Isolamento & Isolação galvânica entre primário e secundário \\ \hline
+    Rigidez dielétrica & Até 3 kV \\ \hline
+    Tipo de instalação & Clamp (não invasivo) \\ \hline
+    Diâmetro interno & Aproximadamente 13 mm \\ \hline
+    Saída & Conector P2 (3,5 mm) \\ \hline
+    Temperatura de operação & -25°C a 70°C \\ \hline
+    Aplicações típicas & Monitoramento de energia, medição de carga \\ \hline
+    \end{tabular}
+    \label{quadro:esp_SCT013}
+\end{table}
+
+\subsection{Sensor de Tensão}
