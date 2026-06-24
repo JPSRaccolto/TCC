@@ -30,4 +30,12 @@
 \contentsline {subsection}{\numberline {3.8.4}Árvores de Decisão e Métodos de Ensemble}{33}{subsection.3.8.4}%
 \contentsline {subsection}{\numberline {3.8.5}Otimização e Validação}{33}{subsection.3.8.5}%
 \contentsline {subsection}{\numberline {3.8.6}Métricas de Avaliação}{34}{subsection.3.8.6}%
-\contentsline {chapter}{REFERÊNCIAS}{37}{chapter*.17}%
+\contentsline {chapter}{\numberline {4}Metodologia}{35}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Sistema Proposto}{35}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Levantamento dos materiais}{36}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Sensor de corrente}{37}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Sensor de Tensão}{39}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Módulo MicroSD}{40}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Display OLED SSD1306}{40}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Plataforma de Desenvolvimento}{42}{section.4.3}%
+\contentsline {chapter}{REFERÊNCIAS}{46}{chapter*.27}%

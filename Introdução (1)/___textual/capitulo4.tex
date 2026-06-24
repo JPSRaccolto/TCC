@@ -20,11 +20,18 @@ Para o desenvolvimento do sistema proposto, foi realizado o levantamento dos pri
 	\label{fig:01}
 \end{figure}
 
-Utiliza-se do microcontrolador RP2350, que é composto por um processador dual-core ARM Cortex-M33, operando em até 150 MHz. O componente conta com 520 KB de memória RAM e 4 MB de memória Flash integrada na placa. Além disso, o modelo oferece recursos avançados como unidade de ponto flutuante (FPU), tecnologia de segurança TrustZone, conexão Wi-Fi e Bluetooth 5.2, mantendo o suporte USB Host/Device e os modos de baixo consumo de energia (\textit{low power}). As principais especificações técnicas deste microcontrolador estão descritas na Tabela \ref{quadro:esp_pico2w}. 
+Utiliza-se do microcontrolador RP2350, que é composto por um processador dual-core ARM Cortex-M33, operando em até 150 MHz. O componente conta com 520 KB de memória RAM e 4 MB de memória Flash integrada na placa. Além disso, o modelo oferece recursos avançados como unidade de ponto flutuante (FPU), tecnologia de segurança TrustZone, conexão Wi-Fi e Bluetooth 5.2, mantendo o suporte USB Host/Device e os modos de baixo consumo de energia (\textit{low power}). As principais especificações técnicas deste microcontrolador estão descritas no Quadro \ref{quadro:esp_pico2w}. 
 
-A programação da placa pode ser realizada tanto em MicroPython quanto em C/C++. O envio do código é feito na forma \textit{drag and drop} (arrastar e soltar), isto é, ao conectá-la ao computador, ela é reconhecida como um dispositivo de armazenamento (disco) onde o arquivo do código pode ser colocado para que a placa inicie a execução.
+A programação da placa pode ser realizada em MicroPython, C/C++ e Rust. O envio do código é feito na forma \textit{drag and drop} (arrastar e soltar), isto é, ao conectá-la ao computador, ela é reconhecida como um dispositivo de armazenamento (disco) onde o arquivo do código pode ser colocado para que a placa inicie a execução. A pinagem da placa Raspberry Pi Pico 2 W é apresentada na Figura \ref{fig:picow-pinout}.
+\begin{figure}[!h]
+    \centering
+    \caption{Pinagem da placa Raspberry Pi Pico 2 W}
+    \includegraphics[width=12cm]{figuras/picow-pinout.png}\\
+    \autoria{\cite{raspberrypi_pico_docs}}
+    \label{fig:picow-pinout}
 
-\begin{table}[htbp]
+\end{figure}    
+\begin{quadro}[htbp]
     \centering
     \caption{Especificações do Raspberry Pi Pico 2 W}
     \begin{tabular}{|l|l|}
@@ -47,12 +54,14 @@ A programação da placa pode ser realizada tanto em MicroPython quanto em C/C++
     \textbf{Tensão de Operação} & 3,3 V \\ \hline
     \textbf{Miscelâneas} & Sensor de temperatura on-board, RTC de alta precisão \\ \hline
     \end{tabular}
-    
+    \autoria{Autoria Própria}
     \label{quadro:esp_pico2w}
-\end{table}
+\end{quadro}
 
 \subsection{Sensor de corrente}
-O SCT013-000 Figura \ref{fig:02} é um sensor de corrente não invasivo, amplamente utilizado para monitoramento de consumo energético. Ele é projetado para medir correntes alternadas (AC) em circuitos elétricos sem a necessidade de desconectar ou modificar a fiação existente. O sensor é composto por um transformador de corrente, que induz uma corrente proporcional à corrente primária que está sendo medida. O modelo SCT013-000 é capaz de medir correntes de até 100 A, com uma saída de tensão proporcional à corrente medida, facilitando a integração com sistemas de aquisição de dados. Para a medição da tensão de saida do sensor, é necessário o uso de um resistor de carga, que converte a corrente induzida em uma tensão mensurável pelo ADC do microcontrolador. As principais especificações técnicas deste sensor estão descritas na Tabela \ref{quadro:esp_SCT013}. 
+O SCT013-000 Figura \ref{fig:02} é um sensor de corrente não invasivo, amplamente utilizado para monitoramento de consumo energético. Ele é projetado para medir correntes alternadas (AC) em circuitos elétricos sem a necessidade de desconectar ou modificar a fiação existente. O sensor é composto por um transformador de corrente, que induz uma corrente proporcional à corrente primária que está sendo medida. 
+
+O modelo SCT013-000 é capaz de medir correntes de até 100 A, com uma saída de tensão proporcional à corrente medida, facilitando a integração com sistemas de aquisição de dados. Para a medição da tensão de saida do sensor, é necessário o uso de um resistor de carga, que converte a corrente induzida em uma tensão mensurável pelo ADC do microcontrolador. As principais especificações técnicas deste sensor estão descritas no Quadro \ref{quadro:esp_SCT013}. 
 
 \begin{figure}[!h]
 	\centering
@@ -63,7 +72,7 @@ O SCT013-000 Figura \ref{fig:02} é um sensor de corrente não invasivo, amplame
 \end{figure}
 
 
-\begin{table}[htbp]
+\begin{quadro}[htbp]
     \centering
     \caption{Especificações técnicas do sensor de corrente SCT-013-000}
     \begin{tabular}{|c|c|}
@@ -86,8 +95,105 @@ O SCT013-000 Figura \ref{fig:02} é um sensor de corrente não invasivo, amplame
     Saída & Conector P2 (3,5 mm) \\ \hline
     Temperatura de operação & -25°C a 70°C \\ \hline
     Aplicações típicas & Monitoramento de energia, medição de carga \\ \hline
-    \end{tabular}
+    \end{tabular}\\
+    \autoria{Autoria Própria}
     \label{quadro:esp_SCT013}
-\end{table}
+\end{quadro}
 
 \subsection{Sensor de Tensão}
+O ZMPT101B presente na Figura \ref{fig:zmpt101b} é um sensor de tensão AC baseado em um transformador de alta precisão com relação de transformação de 1000:1000 e isolação galvânica de até 4 kV, garantindo segurança na medição direta da rede elétrica. O módulo é capaz de medir tensões AC na faixa de 0 a 250 V (50/60 Hz) com precisão de $\pm$3\% e linearidade de $\leq$0,2\%, fornecendo um sinal analógico proporcional à tensão medida com offset de VCC/2, compatível com conversores analógico-digitais de microcontroladores como Raspberry Pi e ESP32, a pinagem do módulo está ilustrada na Figura \ref{fig:zmpt_pinout}.
+
+A amplitude da saída pode ser ajustada por meio de um potenciômetro multivolta \textit{onboard}, e o cálculo da tensão RMS é realizado via software, compensando o offset DC imposto pelo circuito de condicionamento baseado no amplificador operacional LM358. As principais especificações técnicas sobre o sensor ZMPT101B estão descritas no Quadro \ref{quad:zmpt101b}.
+
+\begin{figure}[!h]
+    \centering
+    \caption{Pinagem do módulo ZMPT101B}
+    \includegraphics[width=10cm]{figuras/zmpt_pinout.png}\\
+    \autoria{\cite{casa_da_robotica_zmpt101b}}
+    \label{fig:zmpt_pinout}
+\end{figure}
+
+
+\begin{figure}[!h]
+	\centering
+	\caption{Sensor de tensão ZMPT101B}
+	\includegraphics[width=10cm]{figuras/ZMPT101B.png}\\
+	\autoria{\cite{casa_da_robotica_zmpt101b}}
+	\label{fig:zmpt101b}
+\end{figure}
+
+\begin{quadro}[h]
+\centering
+\caption{Especificações técnicas do sensor de tensão ZMPT101B}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Parâmetro} & \textbf{Especificação} \\
+\hline
+Fabricante & Qingxian Zeming Langxi Electronic \\
+\hline
+Modelo & ZMPT101B \\
+\hline
+Tipo & Transformador de tensão (TC) não invasivo \\
+\hline
+Tensão de entrada & 0 a 250 V AC \\
+\hline
+Corrente nominal & 2 mA (primário e secundário) \\
+\hline
+Relação de transformação & 1000:1000 \\
+\hline
+Tensão de saída & 0 a VCC (com offset de VCC/2) \\
+\hline
+Precisão & $\pm$3\% (típica) \\
+\hline
+Linearidade & $\leq$0,2\% (20\% a 120\% da carga nominal) \\
+\hline
+Erro de ângulo de fase & $\leq$20' (resistor de amostragem 100\,$\Omega$) \\
+\hline
+Frequência de operação & 50 Hz a 60 Hz \\
+\hline
+Isolamento & Isolação galvânica entre primário e secundário \\
+\hline
+Rigidez dielétrica & Até 4 kV \\
+\hline
+Tipo de instalação & Conexão direta em série (invasivo) \\
+\hline
+Alimentação do módulo & 5 V a 30 V DC \\
+\hline
+Saída & Sinal analógico (compatível com ADC) \\
+\hline
+Temperatura de operação & -20°C a 85°C \\
+\hline
+Aplicações típicas & Medição de tensão AC, monitoramento de energia \\
+\hline
+\end{tabular}\\
+\label{quad:zmpt101b}
+\autoria{Autoria Própria}
+\end{quadro}
+
+\subsection{Módulo MicroSD}
+O módulo microSD é utilizado para realizar a leitura e gravação de dados em cartões de memória, sendo amplamente empregado em sistemas embarcados para armazenamento de informações. Ele apresenta compatibilidade com o Raspberry Pi Pico W e com bibliotecas disponíveis para esse microcontrolador, além de suportar cartões formatados em FAT32 com capacidade até de 2 GB e cartões micro SDHC (\textit{high-speed}) até 32 GB.
+
+Seu circuito possui uma arquitetura simples, sendo baseado principalmente em um regulador de tensão integrado. Esse componente é responsável por converter a tensão de alimentação de entrada, que pode variar entre 3,3 V e 6 V, para uma tensão estável de 3,3 V, valor necessário para o funcionamento adequado dos cartões microSD.
+
+
+\begin{figure}[!h]
+	\centering
+	\caption{Módulo MicroSD}
+	\includegraphics[width=10cm]{figuras/MicroSD.png}\\
+	\autoria{\cite{casadarobotica_modulosd}}
+	\label{fig:microsd}
+\end{figure}
+
+\subsection{Display OLED SSD1306}
+O display OLED SSD1306 é um módulo de exibição baseado na tecnologia OLED (\textit{Organic Light-Emitting Diode}), que utiliza diodos orgânicos emissores de luz para gerar imagens. Ele é amplamente utilizado em projetos de eletrônica e sistemas embarcados devido à sua alta eficiência energética, contraste elevado e capacidade de exibir informações em tempo real. O módulo é compatível com o protocolo de comunicação I2C, permitindo uma interface simples e eficiente com microcontroladores como o Raspberry Pi Pico 2 W. 
+
+A Figura \ref{fig:oled} apresenta o display OLED SSD1306, a pinagem do módulo, que é composta por quatro pinos: VCC (alimentação), GND, SCL (\textit{clock} do barramento I2C) e SDA (dados do barramento I2C). Devido a alta demanda de informações a serem exibidas, o sistema contará com botões de navegação para permitir a alternância entre diferentes telas de exibição, possibilitando ao usuário visualizar os dados de corrente, tensão e potência em tempo real, bem como o status do sistema.
+\begin{figure}[!h]
+	\centering
+	\caption{Display SSD1306 OLED}
+	\includegraphics[width=10cm]{figuras/ssd1306.png}\\
+	\autoria{\cite{azdelivery_oled}}
+	\label{fig:oled}
+\end{figure}
+
+\section{Plataforma de Desenvolvimento}

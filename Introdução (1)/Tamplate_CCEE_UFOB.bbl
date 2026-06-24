@@ -32,6 +32,13 @@ Dispon{\'\i}vel em:
   \url{https://www.analog.com/en/resources/technical-articles/successive-approximation-registers-sar-and-flash-adcs.html}.
   Acesso em: 03 abr. 2026.}
 
+\bibitem[{AZ-Delivery} 2026]{azdelivery_oled}
+\abntrefinfo{{AZ-Delivery}}{{AZ-Delivery}}{2026}
+{{AZ-Delivery}. \emph{0.96 inch OLED SSD1306 display I2C 128 x 64 pixels
+  compatible with Arduino and Raspberry Pi}. 2026.
+  \url{https://www.az-delivery.de/en/products/0-96zolldisplay}.
+Acessado em: 24 jun. 2026.}
+
 \bibitem[Bezerra 2020]{Bezerra2020}
 \abntrefinfo{Bezerra}{BEZERRA}{2020}
 {BEZERRA, E.~A.
@@ -51,6 +58,20 @@ Monografia (Dissertação de Mestrado) --- Universidade Salvador (UNIFACS),
 \emph{Sistema embarcado para medição de energia e monitoramento online}.
 Monografia (Trabalho de Conclusão de Curso) --- Instituto de Ciência e
   Tecnologia de Sorocaba, Universidade Estadual Paulista (UNESP), 2025.}
+
+\bibitem[{Casa da Robótica} 2026]{casadarobotica_modulosd}
+\abntrefinfo{{Casa da Robótica}}{{Casa da Robótica}}{2026a}
+{{Casa da Robótica}. \emph{Módulo Leitor / Gravador de Cartão Micro SD}.
+  2026.
+  \url{https://www.casadarobotica.com/sensores-e-modulos/modulos/outros/modulo-leitor-gravador-de-cartao-micro-sd}.
+Acessado em: 24 de junho de 2026.}
+
+\bibitem[{Casa da Robótica} 2026]{casa_da_robotica_zmpt101b}
+\abntrefinfo{{Casa da Robótica}}{{Casa da Robótica}}{2026b}
+{{Casa da Robótica}. \emph{Sensor de Tensão AC 0 a 250V Voltímetro
+  ZMPT101B}. 2026.
+  \url{https://www.casadarobotica.com/sensores-modulos/sensores/tensao/sensor-de-tensao-ac-0-a-250v-voltimetro-zmpt101b}.
+Acessado em: 24 de junho de 2026.}
 
 \bibitem[Cho et al. 2014]{Cho2014}
 \abntrefinfo{Cho et al.}{CHO et al.}{2014}
@@ -164,6 +185,20 @@ Dispon{\'\i}vel em:
   computacionais}. 2025. Universidade Federal do Rio Grande (FURG) / Faculdade
   Anhanguera.}
 
+\bibitem[MakerHero 2026]{makerhero_pico2w}
+\abntrefinfo{MakerHero}{MAKERHERO}{2026}
+{MAKERHERO. \emph{Raspberry Pi Pico 2 W}. 2026.
+Dispon{\'\i}vel em:
+  \url{https://www.makerhero.com/produto/raspberry-pi-pico-2-w/}. Acesso em: 19
+  mar. 2026.}
+
+\bibitem[{MAKERHERO} 2026]{makerhero_sct013}
+\abntrefinfo{{MAKERHERO}}{{MAKERHERO}}{2026}
+{{MAKERHERO}. \emph{Sensor de Corrente Não Invasivo 100A SCT-013}. 2026.
+Dispon{\'\i}vel em:
+  \url{https://www.makerhero.com/produto/sensor-de-corrente-nao-invasivo-100a-sct-013/}.
+  Acesso em: 20 mar. 2026.}
+
 \bibitem[Neumann 1945]{Neumann1945}
 \abntrefinfo{Neumann}{NEUMANN}{1945}
 {NEUMANN, J.~V. \emph{First Draft of a Report on the EDVAC}. 1945.
@@ -216,6 +251,14 @@ Dispon{\'\i}vel em:
 {PIMENTEL, H. P. P. d.~S. et al. Predição do consumo energético de
   dispositivos {LoRa} usando aprendizagem de máquina. In:  \emph{XXV Congresso
   Brasileiro de Automática - CBA 2024}. [S.l.: s.n.], 2024.}
+
+\bibitem[{Raspberry Pi Ltd} 2026]{raspberrypi_pico_docs}
+\abntrefinfo{{Raspberry Pi Ltd}}{{Raspberry Pi Ltd}}{2026}
+{{Raspberry Pi Ltd}. \emph{Pico microcontroller boards - Raspberry Pi
+  Documentation}. 2026.
+Acessado em: 24 jun. 2026.
+Dispon{\'\i}vel em:
+  \url{https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html}.}
 
 \bibitem[Rio, Eichner e Rizzetti 2020]{Rio2020}
 \abntrefinfo{Rio, Eichner e Rizzetti}{RIO; EICHNER; RIZZETTI}{2020}

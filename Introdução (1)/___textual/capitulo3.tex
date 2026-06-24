@@ -46,27 +46,31 @@ Em contraste direto, a arquitetura de Harvard, apresentada na Figura \ref{fig:ha
     \label{fig:harvard}
 \end{figure}
 
-Para uma compreensão estruturada, a Tabela \ref{tab:comparativo_arq} ilustra as diferenças que definem a adequação destas arquiteturas aos projetos de eletrônica embarcada.
+Para uma compreensão estruturada, a Tabela \ref{quad:arquiteturas} ilustra as diferenças que definem a adequação destas arquiteturas aos projetos de eletrônica embarcada.
 
-\begin{table}[!h]
-\centering
-\caption{Comparativo entre as Arquiteturas de Von Neumann e Harvard}
-\begin{tabular}{p{4cm} p{5cm} p{5cm}}
-\hline
-\textbf{Característica Estrutural} & \textbf{Arquitetura de Von Neumann} & \textbf{Arquitetura de Harvard} \\
-\hline
-\textbf{Organização de Memória} & Espaço unificado para código e dados. & Espaços de memória fisicamente separados. \\
-\textbf{Barramentos} & Um único barramento compartilhado. & Barramentos independentes para instruções e dados. \\
-\textbf{Acesso Simultâneo} & Impossível (Gargalo de Von Neumann). & Possível, permitindo alta concorrência (\textit{pipelining}). \\
-\textbf{Complexidade de \textit{Hardware}} & Menor, resultando em \textit{chips} de silício menores. & Maior, devido à duplicação da malha de roteamento. \\
-\textbf{Paradigma de Instruções} & Frequentemente associado a arquiteturas \textit{CISC}. & Tipicamente associado a arquiteturas \textit{RISC}. \\
-\textbf{Desempenho Geral} & Menor \textit{throughput} por ciclo de \textit{clock}. & Alto \textit{throughput}, execução próxima a 1 instrução/ciclo. \\
-\hline
-\end{tabular}
-\\ \autoria{Elaborado pelo autor.}
-\label{tab:comparativo_arq}
-\end{table}
-
+\begin{quadro}[htb]
+    \centering
+    \caption{Arquiteturas de Von Neumann x Harvard}
+    \label{quad:arquiteturas}
+    \begin{tabular}{|l|p{5cm}|p{5cm}|}
+        \hline
+        \textbf{Característica Estrutural} & \textbf{Arquitetura de Von Neumann} & \textbf{Arquitetura de Harvard} \\
+        \hline
+        \textbf{Organização de Memória} & Espaço unificado para código e dados. & Espaços de memória fisicamente separados. \\
+        \hline
+        \textbf{Barramentos} & Um único barramento compartilhado. & Barramentos independentes para instruções e dados. \\
+        \hline
+        \textbf{Acesso Simultâneo} & Impossível (Gargalo de Von Neumann). & Possível, permitindo alta concorrência (\textit{pipelining}). \\
+        \hline
+        \textbf{Complexidade de Hardware} & Menor, resultando em chips de silício menores. & Maior, devido à duplicação da malha de roteamento. \\
+        \hline
+        \textbf{Paradigma de Instruções} & Frequentemente associado a arquiteturas CISC. & Tipicamente associado a arquiteturas RISC. \\
+        \hline
+        \textbf{Desempenho Geral} & Menor \textit{throughput} por ciclo de \textit{clock}. & Alto \textit{throughput}, execução próxima a 1 instrução/ciclo. \\
+        \hline
+    \end{tabular}
+    \autoria{Elaborado pelo autor.}
+\end{quadro}
 \subsection{Conversor Analógico-Digital (ADC)}
 O ADC cumpre a função de receber níveis variáveis de tensão gerados por transdutores ambientais e transformá-los em palavras digitais inteligíveis para a Unidade Lógica e Aritmética. No âmbito dos microcontroladores comerciais aplicados em métricas de energia e automação, a topologia de conversão predominante pelo equilíbrio entre velocidade, custo e resolução é o ADC de Aproximações Sucessivas (\textit{SAR - Successive Approximation Register}). 
 

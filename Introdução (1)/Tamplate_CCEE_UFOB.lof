@@ -9,3 +9,11 @@
 \contentsline {figure}{\numberline {5}{\ignorespaces Diagrama de blocos do ADC de Aproximações Sucessivas (SAR).}}{23}{figure.caption.14}%
 \contentsline {figure}{\numberline {6}{\ignorespaces Efeito da amostragem no espectro: (a) sinal original; (b) amostragem adequada; (c) limite de Nyquist; (d) \textit {aliasing} por subamostragem.}}{26}{figure.caption.15}%
 \contentsline {figure}{\numberline {7}{\ignorespaces Exemplo de afundamento de tensão em sistema trifásico.}}{31}{figure.caption.16}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8}{\ignorespaces Placa Raspberry Pi Pico 2 W}}{36}{figure.caption.17}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Pinagem da placa Raspberry Pi Pico 2 W}}{37}{figure.caption.18}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Sensor de corrente SCT013-000}}{39}{figure.caption.20}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Pinagem do módulo ZMPT101B}}{40}{figure.caption.22}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Sensor de tensão ZMPT101B}}{40}{figure.caption.23}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Módulo MicroSD}}{41}{figure.caption.25}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Display SSD1306 OLED}}{42}{figure.caption.26}%
