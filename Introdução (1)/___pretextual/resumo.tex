@@ -1,5 +1,35 @@
 % o texto deve começar imediatamente na próxima linha a fim de evitar identação
+Este trabalho apresenta o desenvolvimento de um sistema embarcado de baixo
+custo para o monitoramento de grandezas elétricas, com foco na avaliação
+da qualidade da energia fornecida em instalações residenciais. O sistema
+proposto é construído em torno do microcontrolador Raspberry Pi Pico 2 W
+(RP2350), responsável pela aquisição, processamento e registro dos dados
+de tensão e corrente. A aquisição de corrente é realizada por meio de
+sensores SCT013-000, um por fase, enquanto a tensão é obtida com um
+sensor ZMPT101B, com a seleção dos canais realizada por um multiplexador
+CD74HC4067. Os dados processados são armazenados em cartão microSD no
+formato CSV e exibidos localmente em um display OLED SSD1306, além de
+sincronizados temporalmente por meio do protocolo NTP. Até o presente
+estágio do trabalho, foram concluídas as etapas de condicionamento
+analógico dos sinais, desenvolvimento do firmware embarcado, calibração
+dos sensores de tensão e corrente e validação inicial do sistema por
+meio de ensaios em regime permanente e sob condição de falta de fase. Os
+resultados parciais obtidos indicam que a arquitetura desenvolvida é
+capaz de realizar a aquisição contínua das grandezas elétricas e
+registrar corretamente a ocorrência de distúrbios reais na rede.
+Contudo, restam a implementação do cálculo de potência ativa, reativa e
+fator de potência, o desenvolvimento de uma interface web para
+monitoramento remoto, a validação do sistema com bateria de \textit{backup}
+para garantir a continuidade do registro em caso de interrupção do
+fornecimento, o desenvolvimento de um invólucro para acondicionamento
+físico do sistema e, por fim, a implementação de um modelo de
+aprendizado de máquina para previsão do consumo energético a partir dos
+dados coletados. Conclui-se que a solução proposta é viável técnica e
+economicamente, apresentando potencial para aplicações de monitoramento
+residencial de baixo custo e identificação de eventos que possam
+comprometer a qualidade da energia entregue ao consumidor.
 
 
-\palavraschave{}
+\palavraschave{Qualidade de Energia Elétrica, Sistema Embarcado, Raspberry Pi Pico 2 W,
+Aprendizado de Máquina, Internet das Coisas (IoT).}
 % ATENÇÃO! Obrigatório um espaço entre a última linha do resumo e o comando \palavraschave{...}

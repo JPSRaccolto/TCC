@@ -1,4 +1,4 @@
-\chapter{Metodologia}{}
+\chapter{METODOLOGIA}{}
 \section{Sistema Proposto}
 
 O sistema proposto neste trabalho consiste no desenvolvimento de uma estação de aquisição de dados elétricos, capaz de monitorar grandezas como corrente e tensão em tempo real, utilizando uma plataforma embarcada de baixo custo voltada para ambientes residênciais. Além disso, propoem-se a realização de um pós processamento desses dados coletados, com o objetivo de analisar e prever o consumo de energia elétrica por meio de técnicas de aprendizado de máquina.
@@ -183,6 +183,49 @@ Seu circuito possui uma arquitetura simples, sendo baseado principalmente em um 
 	\autoria{\cite{casadarobotica_modulosd}}
 	\label{fig:microsd}
 \end{figure}
+\subsection{Módulo Multiplexador Analógico}
+
+O módulo multiplexador analógico 74HC4067 é um circuito integrado CMOS de 16 canais utilizado para selecionar um entre diversos sinais analógicos ou digitais e direcioná-lo para uma única saída comum. Neste trabalho, sua utilização torna-se necessária devido à limitação do número de canais do conversor analógico-digital (ADC) disponível no microcontrolador Raspberry Pi Pico 2 W, permitindo a aquisição de múltiplos sinais provenientes dos sensores de corrente SCT013-000 e de tensão ZMPT101B utilizando apenas um canal de entrada analógica. A Figura \ref{fig:74HC4067} apresenta o módulo multiplexador analógico 74HC4067.
+
+O funcionamento do módulo baseia-se na comutação eletrônica entre seus dezesseis canais de entrada (C0 a C15), realizada por meio de quatro linhas de seleção digitais (S0, S1, S2 e S3). Conforme a combinação lógica aplicada nessas entradas de controle, apenas um dos canais é conectado ao terminal comum (SIG), possibilitando que o microcontrolador realize a leitura sequencial dos sinais analógicos sem a necessidade de um conversor analógico-digital externo. Além disso, o módulo opera com baixa resistência de condução e reduzida corrente de fuga, características que contribuem para minimizar distorções durante a aquisição dos sinais.
+
+As principais especificações técnicas do módulo multiplexador 74HC4067 estão descritas no Quadro \ref{quad:74HC4067}.
+\begin{figure}[!h]
+	\centering
+	\caption{Módulo Multiplexador Analógico 74HC4067}
+	\includegraphics[width=8cm]{figuras/multiplexador.png}\\
+	\autoria{\cite{usinainfo_multiplexador_74hc4067}}
+	\label{fig:74HC4067}
+\end{figure}
+
+
+\begin{quadro}[h]
+\centering
+\caption{Especificações técnicas do módulo multiplexador analógico 74HC4067}
+\label{quad:74HC4067}
+\begin{tabular}{|p{6cm}|p{8cm}|}
+\hline
+\textbf{Parâmetro} & \textbf{Especificação} \\ \hline
+Modelo & 74HC4067 \\ \hline
+Tecnologia & CMOS \\ \hline
+Tipo & Multiplexador/Demultiplexador analógico de 16 canais \\ \hline
+Número de canais & 16 \\ \hline
+Linhas de seleção & 4 (S0, S1, S2 e S3) \\ \hline
+Canal comum & SIG \\ \hline
+Tensão de alimentação & 2 V a 6 V \\ \hline
+Tensão típica de operação & 3,3 V ou 5 V \\ \hline
+Resistência ON típica & Aproximadamente 70 $\Omega$ (@ 4,5 V) \\ \hline
+Corrente de fuga & Menor que 1 $\mu$A (típica) \\ \hline
+Compatibilidade & Sinais analógicos e digitais \\ \hline
+Aplicações típicas & Expansão de entradas ADC, seleção de sensores e aquisição de sinais \\ \hline
+Encapsulamento & Módulo baseado no CI 74HC4067 (TSSOP-24/SOIC-24) \\ \hline
+\end{tabular}
+\caption*{Fonte: Autoria Própria.}
+\end{quadro}
+
+
+
+
 
 \subsection{Display OLED SSD1306}
 O display OLED SSD1306 é um módulo de exibição baseado na tecnologia OLED (\textit{Organic Light-Emitting Diode}), que utiliza diodos orgânicos emissores de luz para gerar imagens. Ele é amplamente utilizado em projetos de eletrônica e sistemas embarcados devido à sua alta eficiência energética, contraste elevado e capacidade de exibir informações em tempo real. O módulo é compatível com o protocolo de comunicação I2C, permitindo uma interface simples e eficiente com microcontroladores como o Raspberry Pi Pico 2 W. 
@@ -191,9 +234,118 @@ A Figura \ref{fig:oled} apresenta o display OLED SSD1306, a pinagem do módulo, 
 \begin{figure}[!h]
 	\centering
 	\caption{Display SSD1306 OLED}
-	\includegraphics[width=10cm]{figuras/ssd1306.png}\\
+	\includegraphics[width=8cm]{figuras/ssd1306.png}\\
 	\autoria{\cite{azdelivery_oled}}
 	\label{fig:oled}
 \end{figure}
+\section{Processamento Analógico do Sinal}
+Com o propósito de adequar os sinais provenientes dos sensores SCT013-000, fez-se necessário o uso de condicionadores de sinais analógicos para converter o nível de corrente do sensor que varia de 0 a 50 mA em uma tensão compatível com o valor de referência do ADC do microcontrolador que é de 3,3V.
+
+Para isso, foi utilizado um resistor de carga de 33 $\Omega$ em paralelo com o sensor, resultando em uma tensão máxima de 1,65 a 3,3V. Além disso, foi implementado um circuito de offset utilizando um divisor resistivo para elevar o nível de tensão do sinal para 1,65V, garantindo que o sinal esteja centrado em torno do ponto médio do ADC. A figura \ref{fig:condicionador_corrente} apresenta o diagrama do circuito de condicionamento de sinal para o sensor de corrente SCT013-000.
+\begin{figure}[!h]
+	\centering
+	\caption{Condicionador de sinal para o sensor de corrente SCT013-000}
+	\includegraphics[width=10cm]{figuras/condicionador_sinais.png}\\
+	\autoria{Autoria Própria}
+	\label{fig:condicionador_corrente}
+\end{figure}
+
+Ademais, para atenuar os ruidosos provenientes da rede elétrica projetou-se um filtro passa-baixa de sétima ordem com frequência de corte de 300 Hz, por meio do \textit{software} FilterPro. A Figura \ref{fig:filtro} apresenta o diagrama do filtro passa-baixa implementado no sistema.
+
+\begin{figure}[!h]
+    \centering
+    \caption{Filtro passa-baixa de sétima ordem com frequência de corte de 300 Hz}
+    \includegraphics[width=17cm]{figuras/filtro.png}\\
+    \autoria{Autoria Própria}
+    \label{fig:filtro}
+\end{figure}
+
+Como forma de garantir a organização do circuito, os componentes foram montados em uma placa de circuito impresso (PCI) desenvolvida no \textit{software} KICAD, com o objetivo de reduzir o tamanho do sistema e facilitar a integração dos módulos. A Figura \ref{fig:pcb1} e Figura \ref{fig:pcb2} apresentam as placas de circuito impresso desenvolvida para o condicionamento dos sinais provenientes dos sensores e a Interface Homen Máquina(IHM). 
+\begin{figure}[!h]
+	\centering
+	\caption{Placa de circuito impresso para condicionador e filtro}
+	\includegraphics[width=10cm]{figuras/pcb2.jpeg}\\
+	\autoria{Autoria Própria}
+	\label{fig:pcb2}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\caption{IHM}
+	\includegraphics[width=10cm]{figuras/pcb1.jpeg}\\
+	\autoria{Autoria Própria}
+	\label{fig:pcb1}
+\end{figure}
 
 \section{Plataforma de Desenvolvimento}
+
+O raspberry Pi Pico 2 W é uma placa de prototipagem baseada no microcontrolador RP2350, que oferece recursos avançados de conectividade sem fio, baixo consumo de energia e suporte a múltiplas linguagens de programação. A escolha dessa plataforma se deve à sua capacidade de atender às necessidades do sistema proposto, permitindo a aquisição, processamento e armazenamento dos dados elétricos de forma eficiente e confiável.
+
+Entre as linguagens de programação destacam-se C/C++, empregada no desenvolvimento do firmware devido ao seu alto desempenho e controle direto sobre os periféricos do microcontrolador, e Python utilizado no desenvolvimento de scripts para processamento, análise e visualização dos dados coletados. Além disso, o RP2350 dispõe de interfaces de comunicação como UART, I²C, SPI, ADC e GPIO, possibilitando a integração com sensores, dispositivos de armazenamento e módulos de comunicação, tornando a plataforma adequada para aplicações de monitoramento e aquisição de dados em tempo real.
+
+Nesse sentido, optou-se por utilizar a linguagem C/C++ para o desenvolvimento do \textit{firmware} utilizando como plataforma de desenvolvimento o \textit{software} Visual Studio Code, juntamente com a extensão Raspberry Pi Pico SDK, que fornece as bibliotecas e ferramentas necessárias para a programação do microcontrolador.
+
+\section{Arquitetura do Firmware}
+
+
+
+O firmware embarcado no Raspberry Pi Pico 2 W foi dividido em duas partes:
+uma etapa de inicialização, executada apenas uma vez ao ligar o sistema, e
+um laço principal, que se repete indefinidamente enquanto o equipamento
+estiver energizado. Essa divisão foi adotada pois, a etapa de calibração
+dos sensores depende de uma condição específica, ausência de carga nas
+fases monitoradas que só é válida no instante da energização, enquanto
+o restante do sistema precisa operar de forma contínua durante toda a
+medição. A Figura~\ref{fig:fluxograma_firmware} apresenta o fluxograma
+geral da lógica implementada no firmware.
+
+Na inicialização, o microcontrolador configura os periféricos de hardware
+necessários à aquisição dos sinais, isto é, o conversor analógico-digital
+e o multiplexador CD74HC4067, além das entradas digitais usadas pelos
+botões da interface física. Em seguida, é feita a calibração dos canais
+de corrente e de tensão, em que o sistema mede o nível de offset CC e o
+ruído de fundo de cada canal sem a presença de carga, valores que serão
+usados posteriormente no cálculo do valor RMS de cada grandeza. Depois da
+calibração, o firmware tenta sincronizar o relógio interno via NTP,
+utilizando a conexão Wi-Fi da placa; caso essa sincronização falhe, o
+sistema segue com um horário padrão, sem que isso impeça o restante da
+inicialização. Por fim, é feita a tentativa de montagem do cartão
+microSD, responsável por armazenar localmente os dados coletados. Se a
+montagem falhar, o sistema continua funcionando normalmente, porém sem a
+função de registro em arquivo, sinalizando esse estado ao usuário pela
+interface.
+
+Concluída a inicialização, o firmware passa a executar o laço principal,
+que se repete em intervalos fixos de amostragem. A cada repetição:
+
+\begin{enumerate}
+    \item[I.] O estado dos botões de interface é verificado;
+
+    \item[II.] Realiza-se a leitura sequencial dos canais de corrente
+    (fases L1, L2 e L3) e do canal de tensão;
+
+    \item[III.] Caso o instante de registro programado tenha sido
+    atingido, os valores medidos são gravados em formato CSV no cartão
+    microSD, caso contrário, essa etapa é ignorada e o firmware segue
+    diretamente para a próxima;
+
+    \item[IV.] O display OLED é atualizado com os valores instantâneos
+    de corrente e tensão e com o estado atual do armazenamento;
+
+    \item[V.] O firmware aguarda um intervalo de tempo fixo antes de
+    reiniciar o ciclo a partir do item I.
+\end{enumerate}
+
+\begin{figure}[htb]
+    \centering
+    \caption{Fluxograma da lógica de funcionamento do firmware.}
+    \includegraphics[width=0.55\textwidth]{figuras/fluxograma_clean.pdf}
+    \label{fig:fluxograma_firmware}\\
+    \autoria{Autoria Própria.}
+\end{figure}
+
+O uso de interrupção para o tratamento dos botões, em vez de varredura,
+foi necessário porque o tempo de execução da etapa de amostragem dos
+canais é da ordem de segundos, o que faria com que o acionamento de um
+botão fosse perdido caso dependesse de ser lido dentro do próprio laço de
+medição.

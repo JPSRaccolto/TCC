@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.19)  24 JUN 2026 14:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.19)  6 JUL 2026 11:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -951,7 +951,7 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (Tamplate_CCEE_UFOB.aux
 Package babel Info: 'brazil' activates 'portuges' shorthands.
 (babel)             Reported on input line 10.
- (___pretextual/folha_de_aprovacao.aux) (___pretextual/lista_AAS.aux) (___pretextual/lista_simbolos.aux) (___textual/capitulo1.aux) (___textual/capitulo2.aux) (___textual/capitulo3.aux) (___textual/capitulo4.aux))
+ (___pretextual/lista_AAS.aux) (___pretextual/lista_simbolos.aux) (___textual/capitulo1.aux) (___textual/capitulo2.aux) (___textual/capitulo3.aux) (___textual/capitulo4.aux) (___textual/capitulo5.aux) (___textual/capitulo6.aux))
 \openout1 = `Tamplate_CCEE_UFOB.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
@@ -1038,7 +1038,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 Package newfloat Info: Trying Plan B...
-<./__suporte/logo_brasao.png, id=166, 399.1713pt x 486.1362pt>
+<./__suporte/logo_brasao.png, id=206, 399.1713pt x 486.1362pt>
 File: ./__suporte/logo_brasao.png Graphic file (type png)
 <use ./__suporte/logo_brasao.png>
 Package pdftex.def Info: ./__suporte/logo_brasao.png  used on input line 69.
@@ -1085,83 +1085,63 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.75 	\printFolhaAprovacao
-                           [1
-
-]
-\openout2 = `___pretextual/folha_de_aprovacao.aux'.
-
- (___pretextual/folha_de_aprovacao.tex
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 9.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 9.
-) [2
-
+l.83 	\printResumo
+                   [1
 
 ] (___pretextual/resumo.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 4--84
+Underfull \hbox (badness 10000) in paragraph at lines 34--84
 
  []
 
-[3
+[2
 
 
+] (Tamplate_CCEE_UFOB.lof
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 3.
+ [3
 
-
-] (Tamplate_CCEE_UFOB.lof)
+])
 \tf@lof=\write6
 \openout6 = `Tamplate_CCEE_UFOB.lof'.
 
- [4
-
-] (Tamplate_CCEE_UFOB.lot)
-\tf@lot=\write7
-\openout7 = `Tamplate_CCEE_UFOB.lot'.
+ [4] (Tamplate_CCEE_UFOB.lod)
+\tf@lod=\write7
+\openout7 = `Tamplate_CCEE_UFOB.lod'.
 
  [5
-
-] (Tamplate_CCEE_UFOB.lod)
-\tf@lod=\write8
-\openout8 = `Tamplate_CCEE_UFOB.lod'.
-
- [6
-
-] (Tamplate_CCEE_UFOB.lol)
-\tf@lol=\write9
-\openout9 = `Tamplate_CCEE_UFOB.lol'.
-
- [7
 
 ]
 \openout2 = `___pretextual/lista_AAS.aux'.
 
- (___pretextual/lista_AAS.tex) [8
+ (___pretextual/lista_AAS.tex [6
 
 
-]
+] [7]) [8]
 \openout2 = `___pretextual/lista_simbolos.aux'.
 
- (___pretextual/lista_simbolos.tex) [9
+ (___pretextual/lista_simbolos.tex [9
 
 
 
 
-{C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] (Tamplate_CCEE_UFOB.toc [10
+{C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]) [10] (Tamplate_CCEE_UFOB.toc [11
 
 
 
 ])
-\tf@toc=\write10
-\openout10 = `Tamplate_CCEE_UFOB.toc'.
+\tf@toc=\write8
+\openout8 = `Tamplate_CCEE_UFOB.toc'.
 
- [11]
+ [12]
 \openout2 = `___textual/capitulo1.aux'.
 
  (___textual/capitulo1.tex
 Cap\'{\i }tulo 1.
 Package newfloat Info: Setting Plan B file extension to `lof'... on input line 4.
-[12
+[13
 
 
 ]
@@ -1171,31 +1151,13 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package babel Info: 'brazil' activates 'portuges' shorthands.
 (babel)             Reported on input line 29.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.22504pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.22504pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
-
-[13{C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
-<figuras/Diagrama_met.png, id=333, 1105.12875pt x 208.52907pt>
+ [14{C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+<figuras/Diagrama_met.png, id=424, 1105.12875pt x 208.52907pt>
 File: figuras/Diagrama_met.png Graphic file (type png)
 <use figuras/Diagrama_met.png>
 Package pdftex.def Info: figuras/Diagrama_met.png  used on input line 40.
 (pdftex.def)             Requested size: 426.79134pt x 80.53053pt.
-) [14 <./figuras/Diagrama_met.png>]
-\openout2 = `___textual/capitulo2.aux'.
 
- (___textual/capitulo2.tex
-Cap\'{\i }tulo 2.
-[15
-
-
-
-
-] [16])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.22504pt, for example:
@@ -1203,18 +1165,44 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
-[17]
+[15 <./figuras/Diagrama_met.png>])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.22504pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.22504pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
+
+[16]
+\openout2 = `___textual/capitulo2.aux'.
+
+ (___textual/capitulo2.tex
+Cap\'{\i }tulo 2.
+[17
+
+
+
+
+] [18])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.22504pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.22504pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
+
+[19]
 \openout2 = `___textual/capitulo3.aux'.
 
  (___textual/capitulo3.tex
 Cap\'{\i }tulo 3.
-[18
+[20
 
 
 
 
 ]
-<figuras/arq_embarcado.png, id=392, 664.884pt x 462.528pt>
+<figuras/arq_embarcado.png, id=487, 664.884pt x 462.528pt>
 File: figuras/arq_embarcado.png Graphic file (type png)
 <use figuras/arq_embarcado.png>
 Package pdftex.def Info: figuras/arq_embarcado.png  used on input line 15.
@@ -1227,13 +1215,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
-[19 <./figuras/arq_embarcado.png>] [20]
-<figuras/von_neumann.png, id=421, 1156.32pt x 633.11531pt>
+[21 <./figuras/arq_embarcado.png>] [22]
+<figuras/von_neumann.png, id=516, 1156.32pt x 633.11531pt>
 File: figuras/von_neumann.png Graphic file (type png)
 <use figuras/von_neumann.png>
 Package pdftex.def Info: figuras/von_neumann.png  used on input line 34.
 (pdftex.def)             Requested size: 341.43306pt x 186.94128pt.
-<figuras/harvard.png, id=429, 1156.32pt x 659.46375pt>
+<figuras/harvard.png, id=524, 1156.32pt x 659.46375pt>
 File: figuras/harvard.png Graphic file (type png)
 <use figuras/harvard.png>
 Package pdftex.def Info: figuras/harvard.png  used on input line 44.
@@ -1265,8 +1253,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
-[21 <./figuras/von_neumann.png>]
-<figuras/adc_sar.png, id=445, 608.2725pt x 320.397pt>
+[23 <./figuras/von_neumann.png>]
+<figuras/adc_sar.png, id=540, 608.2725pt x 320.397pt>
 File: figuras/adc_sar.png Graphic file (type png)
 <use figuras/adc_sar.png>
 Package pdftex.def Info: figuras/adc_sar.png  used on input line 82.
@@ -1275,7 +1263,7 @@ Package pdftex.def Info: figuras/adc_sar.png  used on input line 82.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22 <./figuras/harvard.png>]
+[24 <./figuras/harvard.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.22504pt, for example:
@@ -1283,7 +1271,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
-[23 <./figuras/adc_sar.png>]
+[25 <./figuras/adc_sar.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.22504pt, for example:
@@ -1291,8 +1279,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
-[24]
-<figuras/aliasing.png, id=493, 373.99725pt x 460.119pt>
+[26]
+<figuras/aliasing.png, id=587, 373.99725pt x 460.119pt>
 File: figuras/aliasing.png Graphic file (type png)
 <use figuras/aliasing.png>
 Package pdftex.def Info: figuras/aliasing.png  used on input line 132.
@@ -1308,27 +1296,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
-[25] [26 <./figuras/aliasing.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.22504pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.22504pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
-
-[27]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.22504pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.22504pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
-
-[28]
-Overfull \hbox (0.27614pt too wide) in paragraph at lines 204--205
-[]\T1/lmr/m/n/12 são vá-li-das e re-pre-sen-tam ade-qua-da-mente o com-por-ta-mento fí-sico do sis-tema ([][]IEEE
- []
-
+[27] [28 <./figuras/aliasing.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.22504pt, for example:
@@ -1345,7 +1313,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
 [30]
-<figuras/afundamento.png, id=632, 389.65575pt x 231.86626pt>
+Overfull \hbox (0.27614pt too wide) in paragraph at lines 204--205
+[]\T1/lmr/m/n/12 são vá-li-das e re-pre-sen-tam ade-qua-da-mente o com-por-ta-mento fí-sico do sis-tema ([][]IEEE
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.22504pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.22504pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
+
+[31]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.22504pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.22504pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
+
+[32]
+<figuras/afundamento.png, id=726, 389.65575pt x 231.86626pt>
 File: figuras/afundamento.png Graphic file (type png)
 <use figuras/afundamento.png>
 Package pdftex.def Info: figuras/afundamento.png  used on input line 233.
@@ -1358,7 +1346,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
-[31 <./figuras/afundamento.png>]
+[33 <./figuras/afundamento.png>]
+<figuras/camadas.png, id=742, 255.95625pt x 183.68625pt>
+File: figuras/camadas.png Graphic file (type png)
+<use figuras/camadas.png>
+Package pdftex.def Info: figuras/camadas.png  used on input line 255.
+(pdftex.def)             Requested size: 341.43306pt x 245.04517pt.
+ [34{C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./figuras/camadas.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.22504pt, for example:
@@ -1366,45 +1360,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
-[32{C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.22504pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.22504pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
-
-[33])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 12.22504pt, for example:
-(fancyhdr)                \setlength{\headheight}{12.22504pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
-
-[34]
+[35]) [36]
 \openout2 = `___textual/capitulo4.aux'.
 
  (___textual/capitulo4.tex
 Cap\'{\i }tulo 4.
-[35
+[37
 
 
 
 
 ]
-<figuras/Pico_2w.png, id=719, 450.18187pt x 185.19188pt>
+<figuras/Pico_2w.png, id=824, 450.18187pt x 185.19188pt>
 File: figuras/Pico_2w.png Graphic file (type png)
 <use figuras/Pico_2w.png>
 Package pdftex.def Info: figuras/Pico_2w.png  used on input line 18.
 (pdftex.def)             Requested size: 284.52756pt x 117.05014pt.
-<figuras/picow-pinout.png, id=724, 633.8079pt x 448.074pt>
+<figuras/picow-pinout.png, id=829, 633.8079pt x 448.074pt>
 File: figuras/picow-pinout.png Graphic file (type png)
 <use figuras/picow-pinout.png>
 Package pdftex.def Info: figuras/picow-pinout.png  used on input line 29.
 (pdftex.def)             Requested size: 341.43306pt x 241.38203pt.
- [36 <./figuras/Pico_2w.png>]
-<figuras/SCT013.png, id=736, 334.851pt x 407.72325pt>
+ [38 <./figuras/Pico_2w.png>]
+<figuras/SCT013.png, id=840, 334.851pt x 407.72325pt>
 File: figuras/SCT013.png Graphic file (type png)
 <use figuras/SCT013.png>
 Package pdftex.def Info: figuras/SCT013.png  used on input line 69.
@@ -1420,8 +1398,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
-[37 <./figuras/picow-pinout.png>] [38]
-<figuras/zmpt_pinout.png, id=752, 317.988pt x 142.73325pt>
+[39 <./figuras/picow-pinout.png>] [40]
+<figuras/zmpt_pinout.png, id=856, 317.988pt x 142.73325pt>
 File: figuras/zmpt_pinout.png Graphic file (type png)
 <use figuras/zmpt_pinout.png>
 Package pdftex.def Info: figuras/zmpt_pinout.png  used on input line 111.
@@ -1430,7 +1408,7 @@ Package pdftex.def Info: figuras/zmpt_pinout.png  used on input line 111.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figuras/ZMPT101B.png, id=755, 362.5545pt x 170.43675pt>
+<figuras/ZMPT101B.png, id=859, 362.5545pt x 170.43675pt>
 File: figuras/ZMPT101B.png Graphic file (type png)
 <use figuras/ZMPT101B.png>
 Package pdftex.def Info: figuras/ZMPT101B.png  used on input line 120.
@@ -1448,8 +1426,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
-[39 <./figuras/SCT013.png>]
-<figuras/MicroSD.png, id=764, 302.3295pt x 150.5625pt>
+[41 <./figuras/SCT013.png>]
+<figuras/MicroSD.png, id=868, 302.3295pt x 150.5625pt>
 File: figuras/MicroSD.png Graphic file (type png)
 <use figuras/MicroSD.png>
 Package pdftex.def Info: figuras/MicroSD.png  used on input line 182.
@@ -1458,12 +1436,75 @@ Package pdftex.def Info: figuras/MicroSD.png  used on input line 182.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[40 <./figuras/zmpt_pinout.png> <./figuras/ZMPT101B.png>]
-<figuras/ssd1306.png, id=775, 352.9185pt x 350.5095pt>
+[42 <./figuras/zmpt_pinout.png> <./figuras/ZMPT101B.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.22504pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.22504pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
+
+[43 <./figuras/MicroSD.png>]
+<figuras/multiplexador.png, id=887, 453.49425pt x 514.92375pt>
+File: figuras/multiplexador.png Graphic file (type png)
+<use figuras/multiplexador.png>
+Package pdftex.def Info: figuras/multiplexador.png  used on input line 196.
+(pdftex.def)             Requested size: 227.62204pt x 258.45909pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--211
+[]|\T1/lmr/m/n/12 Multiplexador/Demultiplexador ana-ló-gico
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figuras/ssd1306.png, id=891, 352.9185pt x 350.5095pt>
 File: figuras/ssd1306.png Graphic file (type png)
 <use figuras/ssd1306.png>
-Package pdftex.def Info: figuras/ssd1306.png  used on input line 194.
-(pdftex.def)             Requested size: 284.52756pt x 282.5901pt.
+Package pdftex.def Info: figuras/ssd1306.png  used on input line 237.
+(pdftex.def)             Requested size: 227.62204pt x 226.07422pt.
+[44 <./figuras/multiplexador.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.22504pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.22504pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
+
+[45 <./figuras/ssd1306.png>]
+<figuras/condicionador_sinais.png, id=907, 483.60675pt x 278.84175pt>
+File: figuras/condicionador_sinais.png Graphic file (type png)
+<use figuras/condicionador_sinais.png>
+Package pdftex.def Info: figuras/condicionador_sinais.png  used on input line 248.
+(pdftex.def)             Requested size: 284.52756pt x 164.05568pt.
+<figuras/filtro.png, id=909, 995.51926pt x 165.61874pt>
+File: figuras/filtro.png Graphic file (type png)
+<use figuras/filtro.png>
+Package pdftex.def Info: figuras/filtro.png  used on input line 258.
+(pdftex.def)             Requested size: 483.69684pt x 80.46902pt.
+
+Overfull \hbox (28.45273pt too wide) in paragraph at lines 258--258
+ [][] 
+ []
+
+<figuras/pcb2.jpeg, id=912, 689.57625pt x 408.02437pt>
+File: figuras/pcb2.jpeg Graphic file (type jpg)
+<use figuras/pcb2.jpeg>
+Package pdftex.def Info: figuras/pcb2.jpeg  used on input line 267.
+(pdftex.def)             Requested size: 284.52756pt x 168.35571pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.22504pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.22504pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
+
+[46 <./figuras/condicionador_sinais.png> <./figuras/filtro.png>]
+<figuras/pcb1.jpeg, id=919, 711.4078pt x 678.28406pt>
+File: figuras/pcb1.jpeg Graphic file (type jpg)
+<use figuras/pcb1.jpeg>
+Package pdftex.def Info: figuras/pcb1.jpeg  used on input line 275.
+(pdftex.def)             Requested size: 284.52756pt x 271.28812pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1472,7 +1513,124 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
-[41 <./figuras/MicroSD.png>]) [42 <./figuras/ssd1306.png>] (Tamplate_CCEE_UFOB.bbl [43
+[47 <./figuras/pcb2.jpeg> <./figuras/pcb1.jpeg>]
+Overfull \hbox (19.15623pt too wide) in paragraph at lines 302--317
+\T1/lmr/m/n/12 rios à aqui-si-ção dos si-nais, isto é, o con-ver-sor analógico-digital e o mul-ti-ple-xa-dor CD74HC4067,
+ []
+
+[48]
+<figuras/fluxograma_clean.pdf, id=930, 383.59813pt x 765.32022pt>
+File: figuras/fluxograma_clean.pdf Graphic file (type pdf)
+<use figuras/fluxograma_clean.pdf>
+Package pdftex.def Info: figuras/fluxograma_clean.pdf  used on input line 342.
+(pdftex.def)             Requested size: 250.38564pt x 499.54257pt.
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.22504pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.22504pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
+
+[49] [50 <./figuras/fluxograma_clean.pdf>]
+\openout2 = `___textual/capitulo5.aux'.
+
+ (___textual/capitulo5.tex
+Cap\'{\i }tulo 5.
+<figuras/circuito_proto.jpeg, id=1011, 542.025pt x 548.0475pt>
+File: figuras/circuito_proto.jpeg Graphic file (type jpg)
+<use figuras/circuito_proto.jpeg>
+Package pdftex.def Info: figuras/circuito_proto.jpeg  used on input line 10.
+(pdftex.def)             Requested size: 318.66948pt x 322.21628pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[51
+
+
+
+
+]
+<figuras/motor.jpeg, id=1018, 874.01532pt x 663.98062pt>
+File: figuras/motor.jpeg Graphic file (type jpg)
+<use figuras/motor.jpeg>
+Package pdftex.def Info: figuras/motor.jpeg  used on input line 40.
+(pdftex.def)             Requested size: 227.62206pt x 172.9247pt.
+<figuras/Alicate.jpeg, id=1019, 529.22719pt x 1204.5pt>
+File: figuras/Alicate.jpeg Graphic file (type jpg)
+<use figuras/Alicate.jpeg>
+Package pdftex.def Info: figuras/Alicate.jpeg  used on input line 48.
+(pdftex.def)             Requested size: 182.09486pt x 414.43182pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.22504pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.22504pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
+
+[52 <./figuras/circuito_proto.jpeg>]
+<figuras/bancada.jpeg, id=1026, 753.5653pt x 840.89156pt>
+File: figuras/bancada.jpeg Graphic file (type jpg)
+<use figuras/bancada.jpeg>
+Package pdftex.def Info: figuras/bancada.jpeg  used on input line 102.
+(pdftex.def)             Requested size: 273.14923pt x 304.79933pt.
+<figuras/I_L1.png, id=1031, 867.24pt x 263.0628pt>
+File: figuras/I_L1.png Graphic file (type png)
+<use figuras/I_L1.png>
+Package pdftex.def Info: figuras/I_L1.png  used on input line 119.
+(pdftex.def)             Requested size: 386.96027pt x 117.37767pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.22504pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.22504pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
+
+[53 <./figuras/motor.jpeg>]
+<figuras/I_L2.png, id=1036, 867.24pt x 264.0264pt>
+File: figuras/I_L2.png Graphic file (type png)
+<use figuras/I_L2.png>
+Package pdftex.def Info: figuras/I_L2.png  used on input line 127.
+(pdftex.def)             Requested size: 386.96027pt x 117.80762pt.
+<figuras/I_L3.png, id=1037, 867.24pt x 264.5082pt>
+File: figuras/I_L3.png Graphic file (type png)
+<use figuras/I_L3.png>
+Package pdftex.def Info: figuras/I_L3.png  used on input line 135.
+(pdftex.def)             Requested size: 386.96027pt x 118.0226pt.
+<figuras/V_rede.png, id=1038, 867.24pt x 264.99pt>
+File: figuras/V_rede.png Graphic file (type png)
+<use figuras/V_rede.png>
+Package pdftex.def Info: figuras/V_rede.png  used on input line 143.
+(pdftex.def)             Requested size: 386.96027pt x 118.23758pt.
+ [54 <./figuras/Alicate.jpeg>])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.22504pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.22504pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
+
+[55 <./figuras/bancada.jpeg> <./figuras/I_L1.png>] [56 <./figuras/I_L2.png> <./figuras/I_L3.png> <./figuras/V_rede.png>]
+\openout2 = `___textual/capitulo6.aux'.
+
+ (___textual/capitulo6.tex
+Cap\'{\i }tulo 6.
+[57
+
+
+
+
+])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.22504pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.22504pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
+
+[58] (Tamplate_CCEE_UFOB.bbl [59
 
 
 
@@ -1484,7 +1642,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
-[44]
+[60]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.22504pt, for example:
@@ -1492,7 +1650,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
-[45])
+[61])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.22504pt, for example:
@@ -1500,8 +1658,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-0.22504pt}.
 
-[46]
-<./__suporte/logo_marca.png, id=837, 1152.55594pt x 1497.34406pt>
+[62]
+<./__suporte/logo_marca.png, id=1118, 1152.55594pt x 1497.34406pt>
 File: ./__suporte/logo_marca.png Graphic file (type png)
 <use ./__suporte/logo_marca.png>
 Package pdftex.def Info: ./__suporte/logo_marca.png  used on input line 141.
@@ -1510,37 +1668,41 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 141.
 Package acronym Info: Label `acro:UFOB' newly defined as it shall be overridden
 although it is yet undefined on input line 141.
- [47
+
+
+Package acronym Warning: Acronym UFOB is not defined on input line 141.
+
+
+Package acronym Warning: Acronym UFOB is not defined on input line 141.
+
+[63
 
  <./__suporte/logo_marca.png>] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-(Tamplate_CCEE_UFOB.aux (___pretextual/folha_de_aprovacao.aux) (___pretextual/lista_AAS.aux) (___pretextual/lista_simbolos.aux) (___textual/capitulo1.aux) (___textual/capitulo2.aux) (___textual/capitulo3.aux) (___textual/capitulo4.aux))
+(Tamplate_CCEE_UFOB.aux (___pretextual/lista_AAS.aux) (___pretextual/lista_simbolos.aux) (___textual/capitulo1.aux) (___textual/capitulo2.aux) (___textual/capitulo3.aux) (___textual/capitulo4.aux) (___textual/capitulo5.aux) (___textual/capitulo6.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `Tamplate_CCEE_UFOB.out' has not changed.
-(rerunfilecheck)             Checksum: A32BD1FCDC9D514BC273EFF7FC0B28C0;7372.
+(rerunfilecheck)             Checksum: 63F134A43F5CE9A07C55EBAC77D2BB38;9175.
  )
 (\end occurred inside a group at level 1)
 
 ### semi simple group (level 1) entered at line 102 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 30301 strings out of 467871
- 561182 string characters out of 5419828
- 1043736 words of memory out of 5000000
- 58352 multiletter control sequences out of 15000+600000
- 724279 words of font info for 98 fonts, out of 8000000 for 9000
+ 30396 strings out of 467871
+ 564542 string characters out of 5419828
+ 1044098 words of memory out of 5000000
+ 58402 multiletter control sequences out of 15000+600000
+ 727274 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,118p,1550b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{UFOB} has been referenced but does not exist, replaced by a fixed one
-
-<C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Tamplate_CCEE_UFOB.pdf (48 pages, 7344620 bytes).
+ 99i,13n,118p,1550b,1175s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/JP/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
+Output written on Tamplate_CCEE_UFOB.pdf (64 pages, 9426139 bytes).
 PDF statistics:
- 966 PDF objects out of 1000 (max. 8388607)
- 176 named destinations out of 1000 (max. 500000)
- 413 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1261 PDF objects out of 1440 (max. 8388607)
+ 219 named destinations out of 1000 (max. 500000)
+ 568 words of extra memory for PDF output out of 10000 (max. 10000000)
 

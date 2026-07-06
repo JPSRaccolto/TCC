@@ -1,8 +1,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {quadro}{\numberline {1}{\ignorespaces Arquiteturas de Von Neumann x Harvard}}{23}{quadro.caption.13}%
+\contentsline {quadro}{\numberline {1}{\ignorespaces Arquiteturas de Von Neumann x Harvard}}{25}{quadro.caption.11}%
 \addvspace {10\p@ }
-\contentsline {quadro}{\numberline {2}{\ignorespaces Especificações do Raspberry Pi Pico 2 W}}{38}{quadro.caption.19}%
-\contentsline {quadro}{\numberline {3}{\ignorespaces Especificações técnicas do sensor de corrente SCT-013-000}}{38}{quadro.caption.21}%
-\contentsline {quadro}{\numberline {4}{\ignorespaces Especificações técnicas do sensor de tensão ZMPT101B}}{41}{quadro.caption.24}%
+\contentsline {quadro}{\numberline {2}{\ignorespaces Especificações do Raspberry Pi Pico 2 W}}{40}{quadro.caption.18}%
+\contentsline {quadro}{\numberline {3}{\ignorespaces Especificações técnicas do sensor de corrente SCT-013-000}}{40}{quadro.caption.20}%
+\contentsline {quadro}{\numberline {4}{\ignorespaces Especificações técnicas do sensor de tensão ZMPT101B}}{43}{quadro.caption.23}%
+\contentsline {quadro}{\numberline {5}{\ignorespaces Especificações técnicas do módulo multiplexador analógico 74HC4067}}{45}{quadro.caption.26}%
+\addvspace {10\p@ }
+\contentsline {quadro}{\numberline {6}{\ignorespaces Comparação entre a corrente nominal, a medição de referência e a leitura do sistema embarcado.}}{53}{quadro.caption.36}%
+\addvspace {10\p@ }
+\contentsline {quadro}{\numberline {7}{\ignorespaces Cronograma das próximas etapas do trabalho}}{58}{quadro.caption.42}%

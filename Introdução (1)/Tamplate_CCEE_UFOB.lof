@@ -1,19 +1,36 @@
 \babel@toc {brazil}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Diagrama de blocos do sistema proposto}}{14}{figure.caption.9}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Diagrama de blocos do sistema proposto}}{15}{figure.caption.7}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2}{\ignorespaces Arquitetura de um sistema embarcado típico.}}{19}{figure.caption.10}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Arquitetura de Von Neumann.}}{21}{figure.caption.11}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Arquitetura Harvard.}}{22}{figure.caption.12}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Diagrama de blocos do ADC de Aproximações Sucessivas (SAR).}}{23}{figure.caption.14}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Efeito da amostragem no espectro: (a) sinal original; (b) amostragem adequada; (c) limite de Nyquist; (d) \textit {aliasing} por subamostragem.}}{26}{figure.caption.15}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Exemplo de afundamento de tensão em sistema trifásico.}}{31}{figure.caption.16}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Arquitetura de um sistema embarcado típico.}}{21}{figure.caption.8}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Arquitetura de Von Neumann.}}{23}{figure.caption.9}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Arquitetura Harvard.}}{24}{figure.caption.10}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Diagrama de blocos do ADC de Aproximações Sucessivas (SAR).}}{25}{figure.caption.12}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Efeito da amostragem no espectro: (a) sinal original; (b) amostragem adequada; (c) limite de Nyquist; (d) \textit {aliasing} por subamostragem.}}{28}{figure.caption.13}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Exemplo de afundamento de tensão em sistema trifásico.}}{33}{figure.caption.14}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Modelo de neurônio artificial.}}{34}{figure.caption.15}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8}{\ignorespaces Placa Raspberry Pi Pico 2 W}}{36}{figure.caption.17}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Pinagem da placa Raspberry Pi Pico 2 W}}{37}{figure.caption.18}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Sensor de corrente SCT013-000}}{39}{figure.caption.20}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Pinagem do módulo ZMPT101B}}{40}{figure.caption.22}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Sensor de tensão ZMPT101B}}{40}{figure.caption.23}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Módulo MicroSD}}{41}{figure.caption.25}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Display SSD1306 OLED}}{42}{figure.caption.26}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Placa Raspberry Pi Pico 2 W}}{38}{figure.caption.16}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Pinagem da placa Raspberry Pi Pico 2 W}}{39}{figure.caption.17}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Sensor de corrente SCT013-000}}{41}{figure.caption.19}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Pinagem do módulo ZMPT101B}}{42}{figure.caption.21}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Sensor de tensão ZMPT101B}}{42}{figure.caption.22}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Módulo MicroSD}}{43}{figure.caption.24}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Módulo Multiplexador Analógico 74HC4067}}{44}{figure.caption.25}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Display SSD1306 OLED}}{45}{figure.caption.27}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Condicionador de sinal para o sensor de corrente SCT013-000}}{46}{figure.caption.28}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Filtro passa-baixa de sétima ordem com frequência de corte de 300 Hz}}{46}{figure.caption.29}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Placa de circuito impresso para condicionador e filtro}}{47}{figure.caption.30}%
+\contentsline {figure}{\numberline {20}{\ignorespaces IHM}}{47}{figure.caption.31}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Fluxograma da lógica de funcionamento do firmware.}}{50}{figure.caption.32}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {22}{\ignorespaces Teste preliminar do circuito em protoboard.}}{52}{figure.caption.33}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Motor de indução trifásico WEG W22 utilizado nos ensaios.}}{53}{figure.caption.34}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Alicate amperímetro Minipa ET-3810C utilizado como referência de medição.}}{54}{figure.caption.35}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Bancada de testes de partida de motores utilizada no ensaio de falta de fase.}}{55}{figure.caption.37}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Corrente na fase L1 durante o ensaio de falta de fase.}}{55}{figure.caption.38}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Corrente na fase L2 durante o ensaio de falta de fase.}}{56}{figure.caption.39}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Corrente na fase L3 durante o ensaio de falta de fase.}}{56}{figure.caption.40}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Tensão de rede registrada durante o ensaio de falta de fase.}}{56}{figure.caption.41}%
+\addvspace {10\p@ }

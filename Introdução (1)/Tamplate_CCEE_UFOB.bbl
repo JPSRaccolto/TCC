@@ -119,6 +119,11 @@ Dispon{\'\i}vel em:
 Monografia (Trabalho de Conclusão de Curso) --- Universidade Federal do Rio
   Grande do Sul (UFRGS), 2025.}
 
+\bibitem[FURTADO 2019]{furtado2019}
+\abntrefinfo{FURTADO}{FURTADO}{2019}
+{FURTADO, M. I.~V. \emph{Redes Neurais Artificiais: uma abordagem para sala de
+  aula}. Ponta Grossa: Atena Editora, 2019.}
+
 \bibitem[GILCHRIST 2016]{Gilchrist2016}
 \abntrefinfo{GILCHRIST}{GILCHRIST}{2016}
 {GILCHRIST, A. \emph{Industry 4.0: The Industrial Internet of Things}. New
@@ -287,6 +292,14 @@ Dispon{\'\i}vel em:
   framework to approach control and accountability issues in smart microgrids.
 \emph{IEEE Transactions on Power Electronics}, v.~26, n.~3, p. 664--673, mar
   2011.}
+
+\bibitem[{Usinainfo} 2026]{usinainfo_multiplexador_74hc4067}
+\abntrefinfo{{Usinainfo}}{{Usinainfo}}{2026}
+{{Usinainfo}. \emph{Módulo Multiplexador 74HC4067 / HP4067 CMOS Analógico
+  Digital 16 Canais}. 2026.
+Acesso em: 1 jul. 2026.
+Dispon{\'\i}vel em:
+  \url{https://www.usinainfo.com.br/outros-modulos-arduino/modulo-multiplexador-74hc4067-hp4067-cmos-analogico-digital-16-canais-4759.html}.}
 
 \bibitem[Yiu 2013]{Yiu2013}
 \abntrefinfo{Yiu}{YIU}{2013}

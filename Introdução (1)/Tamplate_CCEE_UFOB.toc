@@ -1,41 +1,51 @@
 \babel@toc {brazil}{}\relax 
-\contentsline {chapter}{\numberline {1}INTRODUÇÃO}{12}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Considerações Iniciais}{12}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Objetivo Geral}{13}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Objetivos Específicos}{13}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Metodologia do Trabalho}{14}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Organização do Texto}{14}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Revisão Bibliográfica}{15}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Fundamentação Teórica}{18}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Sistemas Embarcados}{18}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Microcontroladores}{20}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Conversor Analógico-Digital (ADC)}{22}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Aquisição de Dados}{24}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Teorema de Nyquist-Shannon e o Fenômeno de Aliasing}{25}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Condicionamento de Sinais}{26}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Resistor de Carga}{27}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Offset DC e Polarização}{27}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Amplificação de Sinais}{28}{subsection.3.5.3}%
-\contentsline {section}{\numberline {3.6}Grandezas Elétricas em Sistemas Digitais}{28}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Medidores Convencionais}{29}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Sistemas Não Senoidais e Abordagens Avançadas}{29}{subsection.3.6.2}%
-\contentsline {section}{\numberline {3.7}Qualidade de Energia Elétrica}{30}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Classificação dos Fenômenos}{30}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Afundamento de Tensão}{30}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Impactos nas Instalações}{31}{subsection.3.7.3}%
-\contentsline {section}{\numberline {3.8}Aprendizado de Máquina}{31}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}Redes Neurais Artificiais e a Célula GRU}{32}{subsection.3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}Máquina de Vetores de Suporte}{33}{subsection.3.8.2}%
-\contentsline {subsection}{\numberline {3.8.3}K-Nearest Neighbors}{33}{subsection.3.8.3}%
-\contentsline {subsection}{\numberline {3.8.4}Árvores de Decisão e Métodos de Ensemble}{33}{subsection.3.8.4}%
-\contentsline {subsection}{\numberline {3.8.5}Otimização e Validação}{33}{subsection.3.8.5}%
-\contentsline {subsection}{\numberline {3.8.6}Métricas de Avaliação}{34}{subsection.3.8.6}%
-\contentsline {chapter}{\numberline {4}Metodologia}{35}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Sistema Proposto}{35}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Levantamento dos materiais}{36}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Sensor de corrente}{37}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Sensor de Tensão}{39}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Módulo MicroSD}{40}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Display OLED SSD1306}{40}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Plataforma de Desenvolvimento}{42}{section.4.3}%
-\contentsline {chapter}{REFERÊNCIAS}{46}{chapter*.27}%
+\contentsline {chapter}{\numberline {1}INTRODUÇÃO}{13}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Considerações Iniciais}{13}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Objetivo Geral}{14}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Objetivos Específicos}{14}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Metodologia do Trabalho}{15}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Organização do Texto}{15}{section.1.5}%
+\contentsline {chapter}{\numberline {2}REVISÃO BIBLIOGRÁFICA}{17}{chapter.2}%
+\contentsline {chapter}{\numberline {3}FUNDAMENTAÇÃO TEÓRICA}{20}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Sistemas Embarcados}{20}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Microcontroladores}{22}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Conversor Analógico-Digital (ADC)}{24}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Aquisição de Dados}{26}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Teorema de Nyquist-Shannon e o Fenômeno de Aliasing}{27}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Condicionamento de Sinais}{28}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Resistor de Carga}{29}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Offset DC e Polarização}{29}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Amplificação de Sinais}{30}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.6}Grandezas Elétricas em Sistemas Digitais}{30}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Medidores Convencionais}{31}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Sistemas Não Senoidais e Abordagens Avançadas}{31}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3.7}Qualidade de Energia Elétrica}{32}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Classificação dos Fenômenos}{32}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Afundamento de Tensão}{32}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Impactos nas Instalações}{33}{subsection.3.7.3}%
+\contentsline {section}{\numberline {3.8}Machine Learning}{33}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Redes Neurais Artificiais e a Célula GRU}{34}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Máquina de Vetores de Suporte}{35}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.3}K-Nearest Neighbors}{35}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {3.8.4}Árvores de Decisão e Métodos de Ensemble}{35}{subsection.3.8.4}%
+\contentsline {subsection}{\numberline {3.8.5}Otimização e Validação}{36}{subsection.3.8.5}%
+\contentsline {subsection}{\numberline {3.8.6}Métricas de Avaliação}{36}{subsection.3.8.6}%
+\contentsline {chapter}{\numberline {4}METODOLOGIA}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Sistema Proposto}{37}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Levantamento dos materiais}{38}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Sensor de corrente}{39}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Sensor de Tensão}{41}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Módulo MicroSD}{42}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Módulo Multiplexador Analógico}{42}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Display OLED SSD1306}{44}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Processamento Analógico do Sinal}{46}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Plataforma de Desenvolvimento}{48}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Arquitetura do Firmware}{48}{section.4.5}%
+\contentsline {chapter}{\numberline {5}RESULTADOS PARCIAIS}{51}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Validação do Hardware}{51}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Validação da Medição de Corrente}{52}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ensaio de Falta de Fase}{53}{section.5.3}%
+\contentsline {chapter}{\numberline {6}CONSIDERAÇÕES FINAIS}{57}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Próximas Etapas}{58}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Cronograma de Atividades}{58}{subsection.6.1.1}%
+\contentsline {chapter}{REFERÊNCIAS}{62}{chapter*.43}%

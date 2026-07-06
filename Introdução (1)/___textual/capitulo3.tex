@@ -1,4 +1,4 @@
-\chapter{Fundamentação Teórica}
+\chapter{FUNDAMENTAÇÃO TEÓRICA}
 
 A crescente demanda por sistemas de monitoramento e controle em tempo real tem impulsionado o desenvolvimento de soluções baseadas em sistemas embarcados, especialmente em aplicações voltadas à medição de grandezas elétricas. Esses sistemas permitem a aquisição, processamento e análise de sinais provenientes de sensores, possibilitando maior eficiência, segurança e confiabilidade em instalações elétricas.
 
@@ -244,13 +244,22 @@ Os afundamentos de tensão podem causar diversos impactos, principalmente em equ
     \item perdas de produção.
 \end{itemize}
 
-\section{Aprendizado de Máquina}
+\section{Machine Learning}
 O Aprendizado de Máquina (\textit{Machine Learning} - ML) é um subcampo da Inteligência Artificial voltado ao desenvolvimento de algoritmos que aprendem padrões a partir de dados, sem que as regras de decisão sejam explicitamente programadas \cite{Bishop2006}. Os algoritmos são geralmente classificados em três paradigmas: aprendizado supervisionado, não supervisionado e por reforço \cite{Hastie2009}.
 
-No aprendizado supervisionado, o modelo é treinado a partir de pares entrada-saída $(x_{i},y_{i})$, buscando estimar uma função $f:x\mapsto y$ que minimize o erro entre a resposta predita e a real — paradigma mais adequado ao contexto deste trabalho \cite{Bishop2006}.
+No aprendizado supervisionado, o modelo é treinado a partir de pares entrada-saída $(x_{i},y_{i})$, buscando estimar uma função $f:x\mapsto y$ que minimize o erro entre a resposta predita e a real paradigma mais adequado ao contexto deste trabalho \cite{Bishop2006}. A Figura~\ref{fig:camada} apresenta um modelo multicamadas de neurônios artificais.
+
+\begin{figure}
+    \centering
+    \caption{Modelo de neurônio artificial.}
+    \includegraphics[width=12cm]{figuras/camadas.png}
+    \\\autoria{\citeonline{furtado2019}.}
+    \label{fig:camada}
+\end{figure}
 
 \subsection{Redes Neurais Artificiais e a Célula GRU}
 As Redes Neurais Artificiais (RNAs) são modelos computacionais inspirados no sistema nervoso biológico, estruturados como composições de transformações parametrizadas cujos pesos são ajustados durante o treinamento \cite{Bishop2006}. A unidade fundamental é o neurônio artificial, que computa um potencial de ativação $v_{k}$ a partir de suas entradas e aplica uma função não linear $\varphi(\cdot)$ para produzir sua saída \cite{Bishop2006}:
+
 
 \begin{equation}
     v_{k} = \sum_{j=1}^{N}w_{kj}x_{j}+b_{k}, \quad y_{k} = \varphi(v_{k})

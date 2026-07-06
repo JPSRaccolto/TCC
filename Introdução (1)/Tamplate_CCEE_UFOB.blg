@@ -1,8 +1,6 @@
 This is BibTeX, Version 0.99e
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Tamplate_CCEE_UFOB.aux
-Reallocating 'name_of_file' (item size: 1) to 37 items.
-A level-1 auxiliary file: ___pretextual/folha_de_aprovacao.aux
 Reallocating 'name_of_file' (item size: 1) to 28 items.
 A level-1 auxiliary file: ___pretextual/lista_AAS.aux
 Reallocating 'name_of_file' (item size: 1) to 33 items.
@@ -15,6 +13,10 @@ Reallocating 'name_of_file' (item size: 1) to 25 items.
 A level-1 auxiliary file: ___textual/capitulo3.aux
 Reallocating 'name_of_file' (item size: 1) to 25 items.
 A level-1 auxiliary file: ___textual/capitulo4.aux
+Reallocating 'name_of_file' (item size: 1) to 25 items.
+A level-1 auxiliary file: ___textual/capitulo5.aux
+Reallocating 'name_of_file' (item size: 1) to 25 items.
+A level-1 auxiliary file: ___textual/capitulo6.aux
 Reallocating 'name_of_file' (item size: 1) to 16 items.
 Reallocating 'name_of_file' (item size: 1) to 35 items.
 Reallocating 'name_of_file' (item size: 1) to 12 items.
@@ -39,44 +41,44 @@ Reallocating 'global_strs' (item size: 1) to 4000000 items.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 45 entries,
+You've used 47 entries,
             6714 wiz_defined-function locations,
-            1463 strings with 16804 characters,
-and the built_in function-call counts, 51790 in all, are:
-= -- 5703
-> -- 1058
-< -- 1087
-+ -- 1498
-- -- 330
-* -- 3190
-:= -- 6547
-add.period$ -- 175
-call.type$ -- 45
-change.case$ -- 379
-chr.to.int$ -- 68
-cite$ -- 44
-duplicate$ -- 4714
-empty$ -- 2619
-format.name$ -- 1534
-if$ -- 10768
+            1474 strings with 17196 characters,
+and the built_in function-call counts, 55527 in all, are:
+= -- 6191
+> -- 1088
+< -- 1219
++ -- 1640
+- -- 340
+* -- 3394
+:= -- 6989
+add.period$ -- 183
+call.type$ -- 47
+change.case$ -- 392
+chr.to.int$ -- 70
+cite$ -- 46
+duplicate$ -- 5175
+empty$ -- 2739
+format.name$ -- 1580
+if$ -- 11462
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 800
-newline$ -- 213
-num.names$ -- 215
-pop$ -- 1061
+missing$ -- 836
+newline$ -- 223
+num.names$ -- 225
+pop$ -- 1108
 preamble$ -- 1
-purify$ -- 158
+purify$ -- 164
 quote$ -- 0
-skip$ -- 4891
+skip$ -- 5354
 stack$ -- 1
-substring$ -- 1992
-swap$ -- 1718
-text.length$ -- 20
+substring$ -- 2161
+swap$ -- 1875
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 18
 warning$ -- 0
-while$ -- 281
+while$ -- 294
 width$ -- 0
-write$ -- 661
+write$ -- 690

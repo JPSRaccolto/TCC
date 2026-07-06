@@ -1,5 +1,85 @@
-\chapter{TÍTULO DO CAPÍTULO...}{}
-\label{cap:06}
-\section{Seção do capítulo}
-\lipsum %% gera texto apenas para teste
-\lipsum 
+\chapter{CONSIDERAÇÕES FINAIS}{}
+Este trabalho apresentou o desenvolvimento de um sistema embarcado para
+monitoramento de grandezas elétricas, voltado à aquisição de corrente e
+tensão em tempo real e à posterior aplicação de técnicas de aprendizado
+de máquina para previsão do consumo energético. Até o presente estágio,
+foram concluídas as etapas de levantamento dos materiais, condicionamento
+analógico dos sinais dos sensores SCT013-000 e ZMPT101B, desenvolvimento
+do firmware embarcado no Raspberry Pi Pico 2 W e validação inicial do
+\textit{hardware} desenvolvido.
+
+Em relação aos objetivos específicos definidos, é
+possível afirmar que os dois primeiros projetar um sistema embarcado
+para aquisição de tensão e corrente, e realizar o monitoramento e
+registro contínuo dessas grandezas foram atendidos, uma vez que o
+sistema demonstrou capacidade de realizar leituras em regime permanente
+e de registrar, de forma contínua, a transição para uma condição real
+de distúrbio elétrico.
+
+O terceiro objetivo, referente ao processamento dos sinais para
+obtenção de parâmetros elétricos, foi parcialmente atendido: o sistema
+calcula corretamente os valores RMS de corrente e tensão, restando
+ainda a implementação do cálculo de potência ativa, reativa, aparente
+e fator de potência, que depende da defasagem entre os sinais de
+tensão e corrente de cada fase. O quarto objetivo, de armazenamento e
+organização dos dados coletados, encontra-se atendido por meio do
+registro em cartão microSD no formato CSV. Já o quinto objetivo,
+relativo ao desenvolvimento de um modelo preditivo de consumo
+energético baseado em aprendizado de máquina, ainda não foi iniciado
+nesta etapa do trabalho, permanecendo como a principal atividade a ser
+desenvolvida na continuidade do projeto.
+
+Quanto à precisão das medições, o ensaio de validação indicou um erro relativo de
+aproximadamente 4,3\% na leitura de corrente do sistema em relação ao
+alicate amperímetro utilizado como referência. Embora esse valor esteja
+dentro de uma faixa aceitável para um estágio inicial de calibração,
+ele ainda é superior ao erro relatado por trabalhos correlatos
+apresentados na revisão bibliográfica, como \citeonline{Ferraz2018}, o que indica a necessidade de um refinamento adicional do
+processo de calibração de cada canal de corrente antes da validação
+final do sistema.
+
+
+\section{Próximas Etapas}
+
+
+Diante do exposto, os resultados parciais obtidos até o momento indicam
+que a arquitetura de \textit{hardware} e firmware desenvolvida é capaz
+de atender aos requisitos básicos de aquisição, processamento e
+registro de grandezas elétricas propostos neste trabalho. As próximas
+etapas do desenvolvimento estão descritas no Quadro \ref{quadro:cronograma}.
+
+\subsection{Cronograma de Atividades}
+
+O Quadro~\ref{quadro:cronograma} apresenta o cronograma previsto para
+a execução das próximas etapas do trabalho, entre julho e dezembro de
+2026.
+
+\begin{quadro}[htb]
+\centering
+\caption{Cronograma das próximas etapas do trabalho}
+\label{quadro:cronograma}
+\begin{tabular}{|p{7cm}|c|c|c|c|c|c|}
+\hline
+\textbf{Atividade} & \textbf{Jul} & \textbf{Ago} & \textbf{Set} & \textbf{Out} & \textbf{Nov} & \textbf{Dez} \\
+\hline
+Refinamento da calibração dos sensores de corrente & X & X & & & & \\
+\hline
+Cálculo de potência ativa, reativa e fator de potência & & X & X & & & \\
+\hline
+Critérios de validação temporal para eventos de tensão & & & X & X & & \\
+\hline
+Desenvolvimento da interface web & X & X & X & & & \\
+\hline
+Desenvolvimento da caixa (invólucro) do sistema & & X & X & & & \\
+\hline
+Teste do sistema com bateria de backup & & & X & X & & \\
+\hline
+Desenvolvimento e avaliação do modelo de aprendizado de máquina & & & & X & X & X \\
+\hline
+Redação final e revisão do TCC & & & & & X & X \\
+\hline
+\end{tabular}
+
+\vspace{0.2cm}
+\footnotesize{Fonte: Autoria Própria}
+\end{quadro}
