@@ -407,7 +407,43 @@ static bool try_http_sync(void) {
 
     return parse_http_date_header(ctx.buf);
 }
+bool ntp_sync_time_wifi_connected(void) {
+    printf("\n================================================\n");
+    printf("  Sincronização de Hora (NTP / HTTP)\n");
+    printf("================================================\n\n");
 
+    /* 1) Tenta via SNTP (UDP/123) */
+    if (try_sntp_sync()) {
+        printf("[NTP] Sincronização via SNTP concluída com sucesso!\n\n");
+        return true;
+    }
+
+    /* 2) Fallback via HTTP (porta 80) */
+    if (try_http_sync()) {
+        printf("[NTP] Sincronização via HTTP concluída com sucesso!\n\n");
+        return true;
+    }
+
+    printf("[NTP] SNTP e HTTP falharam, tentando entrada manual...\n");
+
+    struct tm tm_manual;
+    if (!read_datetime_from_user(&tm_manual)) {
+        printf("[NTP] Erro ao ler data/hora do usuário\n");
+        printf("[NTP] Usando padrão: 2026-01-01 00:00:00\n");
+        memset(&tm_manual, 0, sizeof(tm_manual));
+        tm_manual.tm_year = 2026 - 1900;
+        tm_manual.tm_mon  = 0;
+        tm_manual.tm_mday = 1;
+        tm_manual.tm_isdst = -1;
+    }
+
+    aon_set_from_tm(&tm_manual);
+    printf("[NTP] Hora configurada: %04d-%02d-%02d %02d:%02d:%02d\n\n",
+           tm_manual.tm_year + 1900, tm_manual.tm_mon + 1, tm_manual.tm_mday,
+           tm_manual.tm_hour, tm_manual.tm_min, tm_manual.tm_sec);
+
+    return false;
+}
 /**
  * Função principal de sincronização.
  * Ordem: SNTP -> HTTP -> entrada manual.

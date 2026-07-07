@@ -20,7 +20,7 @@
 #include "sd_logger.h"
 #include "oled_display.h"
 #include "ntp_sync.h"
-
+#include "base44_client.h"
 #define NUM_CANAIS 4
 
 /* ===== Botões via interrupção de GPIO =====
@@ -148,35 +148,42 @@ int main(void) {
         medicao_calibrar_canal(&canais[i]);
     }
     printf("--- Calibracao concluida ---\n\n");
-
+    /* MUDE ESSAS CREDENCIAIS PARA SUAS REDES WIFI! */
+    const char *wifi_ssid = "computador";
+    const char *wifi_password = "12345678";
     printf("Aguardando estabilizacao do sistema (%d ms) antes de iniciar...\n\n",
            CALIBRATION_SETTLE_MS);
     sleep_ms(CALIBRATION_SETTLE_MS);
 
-    /* Sincroniza hora via NTP (WiFi) ou entrada manual do usuário */
-    printf("\n================================================\n");
-    printf("  Inicializando Sincronização de Hora\n");
-    printf("================================================\n");
-
-    /* MUDE ESSAS CREDENCIAIS PARA SUAS REDES WIFI! */
-    const char *wifi_ssid = "computador";
-    const char *wifi_password = "12345678";
-
-    bool ntp_success = ntp_sync_time(wifi_ssid, wifi_password);
-    if (ntp_success) {
-        printf("[MAIN] Hora sincronizada via NTP com sucesso\n\n");
-    } else {
-        printf("[MAIN] Hora configurada manualmente (ou padrão)\n\n");
-    }
-
-    /* Inicializa SD e controla o status */
-    if (sd_logger_init()) {
+    /* 1) Monta o SD primeiro — SEM WiFi ativo, evita disputa de IRQ/timing
+     * com a inicializacao SPI do cartao. */
+if (sd_logger_init()) {
         current_sd_status = SD_STATUS_MOUNTED;
         printf("[SD] Cartao montado com sucesso e pronto para gravar.\n\n");
     } else {
         current_sd_status = SD_STATUS_FAILED;
         printf("[AVISO] Sistema vai continuar SEM backup em SD.\n");
         printf("        Verifique montagem/pinos do cartao (config.h).\n\n");
+    }
+    stdio_flush();
+
+    printf("\n================================================\n");
+    printf("  Conectando WiFi / Sincronizando Hora\n");
+    printf("================================================\n");
+    stdio_flush();
+
+    bool base44_ready = base44_client_connect_wifi(WIFI_SSID, WIFI_PASSWORD);
+    bool ntp_success = false;
+
+    if (!base44_ready) {
+        printf("[MAIN] WiFi indisponivel — sem NTP e sem envio ao Base44.\n");
+    } else {
+        ntp_success = ntp_sync_time_wifi_connected();
+        if (ntp_success) {
+            printf("[MAIN] Hora sincronizada via NTP com sucesso\n\n");
+        } else {
+            printf("[MAIN] Hora configurada manualmente (ou padrão)\n\n");
+        }
     }
 
     printf("%-8s %-10s %-10s %-10s %-10s %-10s\n",
@@ -185,7 +192,7 @@ int main(void) {
            "-----", "-----", "-------", "------", "-------", "------");
 
     uint32_t proximo_log_ms = to_ms_since_boot(get_absolute_time());
-
+    uint32_t proximo_envio_base44_ms = to_ms_since_boot(get_absolute_time());
     while (true) {
         /* Processa botões PRIMEIRO - máxima responsividade */
         handle_buttons();
@@ -232,7 +239,17 @@ int main(void) {
         if (current_sd_status == SD_STATUS_MOUNTED && sd_logger_is_logging()) {
             current_sd_status = SD_STATUS_LOGGING;
         }
-
+        if (base44_ready && agora_ms >= proximo_envio_base44_ms) {
+            char ts[24];
+            base44_format_timestamp(ts, sizeof(ts));   /* declare como não-static no .c e exponha no .h se preferir, ou gere o timestamp dentro do proprio send_bulk */
+            base44_reading_t leituras[] = {
+                { "F1", v_rede, i_l1 },
+                { "F2", v_rede, i_l2 },
+                { "F3", v_rede, i_l3 },
+            };
+            base44_client_send_bulk(ts, leituras, 3);
+            proximo_envio_base44_ms = agora_ms + BASE44_SEND_INTERVAL_MS;
+        }
         oled_display_show(i_l1, i_l2, i_l3, i_n, v_rede, current_sd_status);
 
         sleep_ms(READ_INTERVAL_MS);
