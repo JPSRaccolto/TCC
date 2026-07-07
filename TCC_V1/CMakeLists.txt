@@ -43,6 +43,7 @@ add_executable(TCC_V1
         lib/sd_logger.c
         lib/ssd1306.c
         lib/ntp_sync.c
+        lib/base44_client.c
 )
 
 pico_set_program_name(TCC_V1 "TCC_V1")
@@ -52,7 +53,6 @@ pico_set_program_version(TCC_V1 "0.1")
 pico_enable_stdio_uart(TCC_V1 0)
 pico_enable_stdio_usb(TCC_V1 1)
 
-# Add the standard library to the build
 target_link_libraries(TCC_V1
         pico_stdlib
         FatFs_SPI
@@ -62,8 +62,13 @@ target_link_libraries(TCC_V1
         hardware_pwm
         pico_aon_timer
         pico_cyw43_arch_lwip_threadsafe_background
-        pico_lwip_sntp)
+        pico_lwip_sntp
+        pico_lwip_mbedtls
+        pico_mbedtls)
 
+target_compile_definitions(TCC_V1 PRIVATE
+        MQTT_CERT_INC=1   # liga LWIP_ALTCP_TLS em lwipopts.h
+)
 # Add the standard include files to the build
 target_include_directories(TCC_V1 PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}

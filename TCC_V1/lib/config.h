@@ -143,6 +143,11 @@
  * MUDE PARA SUA REDE WIFI!
  * ═══════════════════════════════════════════════════════════════════════ */
 #define WIFI_SSID       "computador"
-#define WIFI_PASSWORD   "12345678*"
-
+#define WIFI_PASSWORD   "12345678"
+/* ═══════════════════════════════════════════════════════════════════════
+ * Base44 — API HTTPS para envio das leituras (PhaseReading)
+ * ═══════════════════════════════════════════════════════════════════════ */
+#define BASE44_HOST            "grinning-volt-pulse-grid.base44.app"
+#define BASE44_API_KEY         "f2120861640f4076bf5cb51d87b7455d"
+#define BASE44_SEND_INTERVAL_MS  4000   /* envia a cada 10s, não a cada 500ms */
 #endif /* CONFIG_H */

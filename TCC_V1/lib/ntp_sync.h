@@ -22,5 +22,5 @@
  * Retorna true se sincronização bem-sucedida, false caso contrário
  */
 bool ntp_sync_time(const char *wifi_ssid, const char *wifi_password);
-
+bool ntp_sync_time_wifi_connected(void);
 #endif /* NTP_SYNC_H */
