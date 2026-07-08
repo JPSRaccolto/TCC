@@ -115,21 +115,44 @@ static void base44_dns_cb(const char *name, const ip_addr_t *ip, void *arg) {
 bool base44_client_connect_wifi(const char *ssid, const char *password) {
     if (s_wifi_connected) return true;
 
+    printf("[BASE44] Antes de cyw43_arch_init()...\n");
+    stdio_flush();
+
     if (cyw43_arch_init()) {
         printf("[BASE44] ERRO ao inicializar WiFi\n");
         return false;
     }
+
+    printf("[BASE44] cyw43_arch_init() OK\n");
+    stdio_flush();
     cyw43_arch_enable_sta_mode();
 
     printf("[BASE44] Conectando ao WiFi '%s'...\n", ssid);
-    int r = cyw43_arch_wifi_connect_timeout_ms(ssid, password, CYW43_AUTH_WPA2_AES_PSK, 10000);
+    int r = -1;
+    for (int tentativa = 1; tentativa <= 3; tentativa++) {
+        r = cyw43_arch_wifi_connect_timeout_ms(ssid, password, CYW43_AUTH_WPA2_AES_PSK, 10000);
+        if (r == 0) break;
+        printf("[BASE44] Tentativa %d/3 falhou (codigo %d)%s\n",
+               tentativa, r, tentativa < 3 ? ", tentando novamente..." : "");
+        if (tentativa < 3) sleep_ms(2000);
+    }
     if (r != 0) {
-        printf("[BASE44] Falha ao conectar ao WiFi (codigo %d)\n", r);
+        printf("[BASE44] Falha ao conectar ao WiFi apos 3 tentativas (codigo %d)\n", r);
         cyw43_arch_deinit();
         return false;
     }
 
     printf("[BASE44] WiFi conectado. IP: %s\n", ip4addr_ntoa(netif_ip4_addr(netif_list)));
+
+    /* Desliga o power-save do radio. Por padrao o CYW43439 pulsa o
+     * radio (liga/desliga em ciclos) pra economizar energia, o que
+     * gera picos de corrente na mesma alimentacao de 3,3V usada pelo
+     * cartao SD. Como a inicializacao do SD e sensivel a tempo (exige
+     * pulsos de clock regulares logo no inicio), um pico de corrente
+     * bem nessa hora pode travar a montagem do cartao. Modo continuo
+     * evita esses picos. */
+    cyw43_wifi_pm(&cyw43_state, CYW43_NO_POWERSAVE_MODE);
+
     s_wifi_connected = true;
     return true;
 }
