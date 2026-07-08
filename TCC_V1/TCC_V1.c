@@ -110,6 +110,35 @@ int main(void) {
     medicao_init();
     oled_display_init();
 
+    /* ===== WiFi / NTP ANTES das interrupções de botão =====
+     * cyw43_arch_init() registra/habilita sua própria IRQ de GPIO
+     * internamente (pino de dados do CYW43439). O SDK do Pico usa um
+     * único callback global de IRQ de GPIO (gpio_set_irq_callback);
+     * se os botões já tivessem registrado esse callback compartilhado
+     * antes do cyw43_arch_init(), a inicialização do WiFi disputava
+     * esse recurso e travava indefinidamente (nunca retornava),
+     * exatamente no ponto observado no log ("Conectando WiFi..." sem
+     * nenhuma linha depois). Por isso o WiFi é inicializado primeiro,
+     * antes de qualquer gpio_set_irq_enabled_with_callback(). */
+    printf("\n================================================\n");
+    printf("  Conectando WiFi / Sincronizando Hora\n");
+    printf("================================================\n");
+    stdio_flush();
+
+    bool base44_ready = base44_client_connect_wifi(WIFI_SSID, WIFI_PASSWORD);
+    bool ntp_success = false;
+
+    if (!base44_ready) {
+        printf("[MAIN] WiFi indisponivel — sem NTP e sem envio ao Base44.\n");
+    } else {
+        ntp_success = ntp_sync_time_wifi_connected();
+        if (ntp_success) {
+            printf("[MAIN] Hora sincronizada via NTP com sucesso\n\n");
+        } else {
+            printf("[MAIN] Hora configurada manualmente (ou padrão)\n\n");
+        }
+    }
+
     /* Inicializa botões em GP0/GP1 (UART pins - forçar como GPIO) */
     gpio_init(BUTTON_NEXT_PIN);
     gpio_set_function(BUTTON_NEXT_PIN, GPIO_FUNC_SIO);  /* Forçar GPIO ao invés de UART */
@@ -148,16 +177,12 @@ int main(void) {
         medicao_calibrar_canal(&canais[i]);
     }
     printf("--- Calibracao concluida ---\n\n");
-    /* MUDE ESSAS CREDENCIAIS PARA SUAS REDES WIFI! */
-    const char *wifi_ssid = "computador";
-    const char *wifi_password = "12345678";
     printf("Aguardando estabilizacao do sistema (%d ms) antes de iniciar...\n\n",
            CALIBRATION_SETTLE_MS);
     sleep_ms(CALIBRATION_SETTLE_MS);
 
-    /* 1) Monta o SD primeiro — SEM WiFi ativo, evita disputa de IRQ/timing
-     * com a inicializacao SPI do cartao. */
-if (sd_logger_init()) {
+    /* Monta o SD depois do WiFi/botões já estarem inicializados. */
+    if (sd_logger_init()) {
         current_sd_status = SD_STATUS_MOUNTED;
         printf("[SD] Cartao montado com sucesso e pronto para gravar.\n\n");
     } else {
@@ -166,25 +191,6 @@ if (sd_logger_init()) {
         printf("        Verifique montagem/pinos do cartao (config.h).\n\n");
     }
     stdio_flush();
-
-    printf("\n================================================\n");
-    printf("  Conectando WiFi / Sincronizando Hora\n");
-    printf("================================================\n");
-    stdio_flush();
-
-    bool base44_ready = base44_client_connect_wifi(WIFI_SSID, WIFI_PASSWORD);
-    bool ntp_success = false;
-
-    if (!base44_ready) {
-        printf("[MAIN] WiFi indisponivel — sem NTP e sem envio ao Base44.\n");
-    } else {
-        ntp_success = ntp_sync_time_wifi_connected();
-        if (ntp_success) {
-            printf("[MAIN] Hora sincronizada via NTP com sucesso\n\n");
-        } else {
-            printf("[MAIN] Hora configurada manualmente (ou padrão)\n\n");
-        }
-    }
 
     printf("%-8s %-10s %-10s %-10s %-10s %-10s\n",
            "Canal", "Valor", "Vrms AC", "DC (V)", "Unidade", "Status");

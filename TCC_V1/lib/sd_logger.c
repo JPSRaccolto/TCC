@@ -13,6 +13,8 @@
 #include "sd_logger.h"
 #include "pico/aon_timer.h"
 #include "pico/util/datetime.h"
+#include "pico/stdio.h"
+#include "spi.h"
 
 static FATFS s_fatfs;
 static FIL   s_file;
@@ -20,7 +22,22 @@ static bool  s_mounted = false;
 static bool  s_file_open = false;
 
 bool sd_logger_init(void) {
+    /* O driver SPI do cartao SD (FatFs_SPI) usa por padrao DMA_IRQ_0 com
+     * handler exclusivo (irq_set_exclusive_handler). O driver WiFi do
+     * Pico W (cyw43_arch) TAMBEM usa DMA_IRQ_0 internamente para a
+     * comunicacao SPI/PIO com o chip CYW43439. Como os dois registram
+     * handler exclusivo na mesma IRQ, quem inicializa por ULTIMO trava
+     * (nao importa a ordem WiFi->SD ou SD->WiFi). A solucao e mover o
+     * SD para DMA_IRQ_1, que fica livre. Precisa ser chamado ANTES do
+     * primeiro acesso ao cartao (f_mount), que e quando o spi_init()
+     * interno roda e reivindica a IRQ. */
+    set_spi_dma_irq_channel(true, true);  /* true = usa DMA_IRQ_1 */
+
+    printf("[SD] Antes de f_mount()...\n");
+    stdio_flush();
     FRESULT fr = f_mount(&s_fatfs, "0:", 1);
+    printf("[SD] f_mount() retornou\n");
+    stdio_flush();
     if (fr != FR_OK) {
         printf("[SD] Falha ao montar cartao: %s (%d)\n", FRESULT_str(fr), fr);
         return false;
