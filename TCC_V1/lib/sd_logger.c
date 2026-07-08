@@ -34,7 +34,7 @@ bool sd_logger_init(void) {
     set_spi_dma_irq_channel(true, true);  /* true = usa DMA_IRQ_1 */
 
     printf("[SD] Antes de f_mount()...\n");
-    stdio_flush();
+    
     FRESULT fr = f_mount(&s_fatfs, "0:", 1);
     printf("[SD] f_mount() retornou\n");
     stdio_flush();
