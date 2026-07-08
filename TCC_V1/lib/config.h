@@ -124,7 +124,7 @@
 #define SD_SPI_MOSI_PIN   11
 #define SD_SPI_MISO_PIN   12
 #define SD_SPI_CS_PIN     9
-#define SD_SPI_BAUD_HZ    (10 * 1000 * 1000)  /* pode reduzir se der erro de leitura */
+#define SD_SPI_BAUD_HZ    (400 * 1000)  /* pode reduzir se der erro de leitura */
 
 /* ═══════════════════════════════════════════════════════════════════════
  * Botões — controle de interface
@@ -137,7 +137,7 @@
 
 #define SD_LOG_FILENAME   "qualidade_energia.csv"
 #define SD_LOG_INTERVAL_MS 1000   /* grava uma linha por segundo */
-
+#define BASE44_APP_ID   "6a4d42cc9bba8389804db7b1"
 /* ═══════════════════════════════════════════════════════════════════════
  * WiFi — sincronização NTP (Network Time Protocol)
  * MUDE PARA SUA REDE WIFI!
@@ -147,7 +147,7 @@
 /* ═══════════════════════════════════════════════════════════════════════
  * Base44 — API HTTPS para envio das leituras (PhaseReading)
  * ═══════════════════════════════════════════════════════════════════════ */
-#define BASE44_HOST            "grinning-volt-pulse-grid.base44.app"
+#define BASE44_HOST      "tccjpsr.base44.app"
 #define BASE44_API_KEY         "f2120861640f4076bf5cb51d87b7455d"
 #define BASE44_SEND_INTERVAL_MS  4000   /* envia a cada 10s, não a cada 500ms */
 #endif /* CONFIG_H */

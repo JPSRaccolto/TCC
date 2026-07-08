@@ -23,7 +23,7 @@ mbedtls_ms_time_t mbedtls_ms_time(void) {
 
 #define BASE44_PORT           443
 #define BASE44_TIMEOUT_S      15
-#define BASE44_RESP_BUF_LEN   512
+#define BASE44_RESP_BUF_LEN   1536
 #define BASE44_BODY_BUF_LEN   1024
 #define BASE44_REQ_BUF_LEN    (BASE44_BODY_BUF_LEN + 512)
 
@@ -77,8 +77,8 @@ static err_t base44_recv_cb(void *arg, struct altcp_pcb *pcb, struct pbuf *p, er
 }
 
 static void base44_err_cb(void *arg, err_t err) {
-    (void)err;
     base44_ctx_t *ctx = (base44_ctx_t *)arg;
+    printf("[BASE44] err_cb disparado, err=%d\n", err);
     ctx->complete = true;
     ctx->ok = false;
 }
@@ -90,9 +90,11 @@ static err_t base44_poll_cb(void *arg, struct altcp_pcb *pcb) {
 
 static err_t base44_connected_cb(void *arg, struct altcp_pcb *pcb, err_t err) {
     base44_ctx_t *ctx = (base44_ctx_t *)arg;
+    printf("[BASE44] connected_cb chamado, err=%d\n", err);
     if (err != ERR_OK) return base44_close(ctx);
 
     if (altcp_write(pcb, s_req_buf, strlen(s_req_buf), TCP_WRITE_FLAG_COPY) != ERR_OK) {
+        printf("[BASE44] altcp_write() falhou\n");
         return base44_close(ctx);
     }
     altcp_output(pcb);
@@ -100,16 +102,23 @@ static err_t base44_connected_cb(void *arg, struct altcp_pcb *pcb, err_t err) {
 }
 
 static void base44_connect_ip(const ip_addr_t *ip, base44_ctx_t *ctx) {
-    if (altcp_connect(ctx->pcb, ip, BASE44_PORT, base44_connected_cb) != ERR_OK) {
+    printf("[BASE44] Conectando ao IP %s : %d\n", ip4addr_ntoa(ip), BASE44_PORT);
+    err_t err = altcp_connect(ctx->pcb, ip, BASE44_PORT, base44_connected_cb);
+    if (err != ERR_OK) {
+        printf("[BASE44] altcp_connect() falhou, err=%d\n", err);
         base44_close(ctx);
     }
 }
 
 static void base44_dns_cb(const char *name, const ip_addr_t *ip, void *arg) {
-    (void)name;
     base44_ctx_t *ctx = (base44_ctx_t *)arg;
-    if (ip) base44_connect_ip(ip, ctx);
-    else    base44_close(ctx);
+    if (ip) {
+        printf("[BASE44] DNS resolveu %s -> %s\n", name, ip4addr_ntoa(ip));
+        base44_connect_ip(ip, ctx);
+    } else {
+        printf("[BASE44] DNS falhou para %s\n", name);
+        base44_close(ctx);
+    }
 }
 
 bool base44_client_connect_wifi(const char *ssid, const char *password) {
@@ -195,12 +204,13 @@ bool base44_client_send_bulk(const char *timestamp_iso, const base44_reading_t *
         "POST /api/entities/PhaseReading/bulk HTTP/1.1\r\n"
         "Host: %s\r\n"
         "api_key: %s\r\n"
+        "appId: %s\r\n"
         "Content-Type: application/json\r\n"
         "Content-Length: %d\r\n"
         "Connection: close\r\n"
         "\r\n"
         "%s",
-        BASE44_HOST, BASE44_API_KEY, body_len, body);
+        BASE44_HOST, BASE44_API_KEY, BASE44_APP_ID, body_len, body);
 
     base44_ctx_t ctx;
     memset(&ctx, 0, sizeof(ctx));
@@ -232,6 +242,7 @@ bool base44_client_send_bulk(const char *timestamp_iso, const base44_reading_t *
     cyw43_arch_lwip_begin();
     ip_addr_t resolved;
     err_t derr = dns_gethostbyname(BASE44_HOST, &resolved, base44_dns_cb, &ctx);
+    printf("[BASE44] dns_gethostbyname retornou %d (0=OK sincrono, %d=em progresso)\n", derr, ERR_INPROGRESS);
     if (derr == ERR_OK) {
         base44_connect_ip(&resolved, &ctx);
     } else if (derr != ERR_INPROGRESS) {
@@ -253,7 +264,7 @@ bool base44_client_send_bulk(const char *timestamp_iso, const base44_reading_t *
     }
 
     bool http_ok = ctx.ok && (strstr(ctx.resp, "HTTP/1.1 2") || strstr(ctx.resp, "HTTP/1.0 2"));
-    if (!http_ok) printf("[BASE44] Envio falhou. Resposta: %.100s\n", ctx.resp);
+    if (!http_ok) printf("[BASE44] Envio falhou. Resposta completa:\n%s\n", ctx.resp);
     else           printf("[BASE44] %d leitura(s) enviada(s) com sucesso\n", count);
 
     return http_ok;
